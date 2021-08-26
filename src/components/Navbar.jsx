@@ -1,3 +1,6 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 //img
 import logo from '../img/logo.png'
 import logoA from '../img/logoA.png';
@@ -7,15 +10,15 @@ import logoL from '../img/logoL.png';
 export default function Navbar() {
     return (
         <div className="overheader container">
-            <a className="overheader_logo">
+            <Link to="/Home"className="overheader_logo">
                 <img className="overheader_logo_img" src={logo} alt="logo"/>
-            </a>
+            </Link>
             <div className="overheader_stock">
                 <div className="overheader_stock_time">45 минут</div>
                 <div className="overheader_stock_text">или пицца бесплатно</div>
             </div>
             <div className="overheader_phone">
-                <a className="overheader_phone_number">9313</a>
+                <Link className="overheader_phone_number">9313</Link>
                 <div className="overheader_phone_inner">
                     <img className="overheader_phone_inner_img" src={logoA}/>
                     <img className="overheader_phone_inner_img" src={logoM}/>
