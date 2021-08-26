@@ -1,60 +1,76 @@
-.overheader {
+.navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    &_logo {
-        display: block;
-        width: 90px;
-        height: 90px;
-        &_img {
-            width: 100%;
-            height: 100%;
+    align-items: center;
+    &_nav {
+        margin-right: 15px;
+        width: 600px;
+        @extend %flex-c-s;
+        height: 60px;
+        &_link {
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -15px;
+                right: 0;
+                background-color: transparent;
+                width: 100%;
+                height: 5px;
+                transition: .2s background-color;
+            }
+            &:hover::before {
+                background-color: #FF9900;
+                transition: .4s background-color;
+            }
         }
     }
-    &_stock {
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // flex-direction: column;
-        @extend %flex-3c;
-        width: 200px;
-        height: 90px;
-        &_time {
-            font-size: 45px;
+    &_container {
+        @extend %flex-2c;
+        height: 60px;
+        &_support {
+            font-size: 15px;
             font-weight: 500;
-        }
-        &_text {
-            font-size: 18px;
-            font-weight: 500;
-        }
-    }
-    &_phone {
-        width: 115px;
-        height: 90px;
-        @extend %flex-3c;
-        &_number {
-            font-size: 48px;
-            font-weight: 500;
+            cursor: pointer;
+            width: 155px;
+            height: 40px;
+            border: 1px solid #FF9900;
+            color: #FF9900;
+            border-radius: 5px;
+            background-color: transparent;
+            margin-right: 15px;
+            transition: background-color .2s;
+            &:hover {
+                color: #fff;
+                background-color: #FF9900;
+                transition: all .2s;
+            }
         }
         &_inner {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @extend %flex-2c;
+            &_shopCard {
+                margin-right: 15px;
+                &_price {
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+                &_product {
+                    font-size: 15px;
+                    font-weight: 500;
+                }
+            }
+            &_basket {
+                @extend %flex-2c;
+                width: 100px;
+                height: 40px;
+                overflow: hidden;
+                background-color: #FF9900;
+                border-radius: 5px;
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
         }
     }
-    &_work {
-        width: 250px;
-        height: 90px;
-        @extend %flex-3c;
-        &_text {
-            font-size: 32px;
-            font-weight: 500;
-        }
-        &_time {
-            font-size: 18px;
-            font-weight: 500;
-        }
-    }
-
 }

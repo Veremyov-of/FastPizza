@@ -1,33 +1,26 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
 //img
-import logo from '../img/logo.png'
-import logoA from '../img/logoA.png';
-import logoM from '../img/logoM.png';
-import logoL from '../img/logoL.png';
+import basket from "../img/basket.png";
 
 export default function Navbar() {
     return (
-        <div className="overheader container">
-            <Link to="/Home"className="overheader_logo">
-                <img className="overheader_logo_img" src={logo} alt="logo"/>
-            </Link>
-            <div className="overheader_stock">
-                <div className="overheader_stock_time">45 минут</div>
-                <div className="overheader_stock_text">или пицца бесплатно</div>
+        <div className="navbar container">
+            <div className="navbar_nav">
+                <a href="#" className="navbar_nav_link">Пиццы</a>
+                <a href="#" className="navbar_nav_link">Комбо</a>
+                <a href="#" className="navbar_nav_link">Закуски</a>
+                <a href="#" className="navbar_nav_link">Напитки</a>
+                <a href="#" className="navbar_nav_link">Акции</a>
+                <a href="#" className="navbar_nav_link">Доставка</a>
             </div>
-            <div className="overheader_phone">
-                <Link className="overheader_phone_number">9313</Link>
-                <div className="overheader_phone_inner">
-                    <img className="overheader_phone_inner_img" src={logoA}/>
-                    <img className="overheader_phone_inner_img" src={logoM}/>
-                    <img className="overheader_phone_inner_img" src={logoL}/>
+            <div className="navbar_container">
+                <button className="navbar_container_support">Служба поддержки</button>
+                <div className="navbar_container_inner">
+                    <div className="navbar_container_inner_shopCard">
+                        <div className="navbar_container_inner_shopCard_price">0<span>руб</span></div>
+                        <div className="navbar_container_inner_shopCard_product">0<span>товар</span></div>
+                    </div>
+                    <a className="navbar_container_inner_basket"><img src={basket} alt="basket"/></a>
                 </div>
-            </div>
-            <div className="overheader_work">
-                <div className="overheader_work_text">Время работы</div>
-                <div className="overheader_work_time">с 10:00 до 02:00</div>
             </div>
         </div>
     );
