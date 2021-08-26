@@ -1,0 +1,60 @@
+.overheader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &_logo {
+        display: block;
+        width: 90px;
+        height: 90px;
+        &_img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &_stock {
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // flex-direction: column;
+        @extend %flex-3c;
+        width: 200px;
+        height: 90px;
+        &_time {
+            font-size: 45px;
+            font-weight: 500;
+        }
+        &_text {
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+    &_phone {
+        width: 115px;
+        height: 90px;
+        @extend %flex-3c;
+        &_number {
+            font-size: 48px;
+            font-weight: 500;
+        }
+        &_inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &_work {
+        width: 250px;
+        height: 90px;
+        @extend %flex-3c;
+        &_text {
+            font-size: 32px;
+            font-weight: 500;
+        }
+        &_time {
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+
+}

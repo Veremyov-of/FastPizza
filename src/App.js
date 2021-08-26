@@ -1,9 +1,16 @@
+import React from "react";
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import Home from './components/Home';
+import "./css/style.css";
+
+//components
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-   <Home />
+    <Router>
+      <Navbar/>
+    </Router>
   );
 }
 
