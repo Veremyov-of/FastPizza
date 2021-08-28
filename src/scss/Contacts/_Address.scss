@@ -1,0 +1,14 @@
+.wrapp_contacts {
+    .address {
+        padding: 10px 30px;
+        @extend %flex-c-s;
+        &_main {
+            font-size: 15px;
+            color: rgb(109, 109, 109);
+        }
+        &_ooo {
+            font-size: 15px;
+            color: rgb(109, 109, 109);
+        }
+    }
+}

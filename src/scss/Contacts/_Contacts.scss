@@ -1,0 +1,89 @@
+.wrapp_contacts {
+    background-color: #373535;
+    padding: 20px 0;
+    .contacts {
+        padding: 0 30px;
+        @extend %flex-c-s;
+        flex-wrap: wrap;
+        &_main {
+            width: 710px;
+            @extend %flex-c-s;
+            flex-wrap: wrap;
+            &_phone {
+                width: 225px;
+                height: 60px;
+                @extend %flex-2c;
+                &_link {
+                    font-size: 22px;
+                    font-weight: 500;
+                    color: #fff;
+                }
+                img {
+                    margin-right: 10px;
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+            &_time {
+                width: 190px;
+                height: 60px;
+                color: #fff;
+                font-size: 22px;
+                font-weight: 500;
+                @extend %flex-2c;
+                img {
+                    margin-right: 10px;
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+            &_mail {
+                width: 225px;
+                height: 60px;
+                color: #fff;
+                @extend %flex-2c;
+                &_link {
+                    font-size: 22px;
+                    font-weight: 500;
+                    color: #fff;
+                }
+                img {
+                    margin-right: 10px;
+                    width: 25px;
+                    height: 19px;
+                }
+            }
+        }
+        &_social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 230px;
+            &_links {
+                margin-right: 20px;
+                @extend %flex-2c;
+                a {
+                    display: block;
+                    width: 25px;
+                    height: 25px;
+                    margin-right: 10px;
+                }
+            }
+            &_phone {
+                position: relative;
+                @extend %flex-3c;
+                &_text {
+                    color: #fff;
+                    font-size: 48px;
+                    font-weight: 500;
+                }
+                &_logos {
+                    position: absolute;
+                    bottom: -25px;
+                    left: 0;
+                    @extend %flex-2c;
+                }
+            }
+        }
+    }
+}

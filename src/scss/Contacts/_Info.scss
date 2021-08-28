@@ -1,0 +1,32 @@
+.wrapp_contacts {
+    .info {
+        border-top: 1px solid rgb(109, 109, 109);
+        margin-top: 35px;
+        @extend %flex-c-s;
+        &_wrapp {
+            padding: 10px 30px;
+            width: 680px;
+            @extend %flex-c-s;
+            flex-wrap: wrap;
+            &_link {
+                font-size: 22px;
+                font-weight: 400;
+                color: rgb(109, 109, 109);
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+        &_pay {
+            padding: 10px;
+            &_link {
+                display: block;
+                font-size: 16px;
+                color: rgb(109, 109, 109);
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

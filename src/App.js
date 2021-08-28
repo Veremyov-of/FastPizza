@@ -7,6 +7,7 @@ import "./css/style.css";
 import Overheader from './components/Overheader';
 import Navbar from "./components/Navbar";
 import Home from './components/Home';
+import Contacts from './components/Contacts';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Home />
         </Route>
       </Switch>
+      <Contacts />
     </Router>
   );
 }

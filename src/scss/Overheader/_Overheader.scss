@@ -37,6 +37,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            &_img {
+                margin-right: 5px;
+            }
         }
     }
     &_work {
