@@ -15,7 +15,7 @@
           flex-direction: column;
 }
 
-.navbar_container, .navbar_container_inner, .navbar_container_inner_basket, .wrapp_contacts .contacts_main_phone, .wrapp_contacts .contacts_main_time, .wrapp_contacts .contacts_main_mail, .wrapp_contacts .contacts_social_links, .wrapp_contacts .contacts_social_phone_logos {
+.navbar_container, .navbar_container_inner, .navbar_container_inner_basket, .wrapp_contacts .contacts_main_phone, .wrapp_contacts .contacts_main_time, .wrapp_contacts .contacts_main_mail, .wrapp_contacts .contacts_social_links, .wrapp_contacts .contacts_social_phone_logos, .footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,7 +27,7 @@
           align-items: center;
 }
 
-.overheader, .navbar, .navbar_nav, .wrapp_contacts .contacts, .wrapp_contacts .contacts_main, .wrapp_contacts .info, .wrapp_contacts .info_wrapp, .wrapp_contacts .address {
+.overheader, .navbar, .navbar_nav, .wrapp_contacts .contacts, .wrapp_contacts .contacts_main, .wrapp_contacts .info, .wrapp_contacts .info_wrapp, .wrapp_contacts .address, .payment {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -388,5 +388,24 @@ a {
 .wrapp_contacts .address_ooo {
   font-size: 15px;
   color: #6d6d6d;
+}
+
+.payment {
+  padding: 30px 10px;
+}
+
+.footer {
+  background-color: #373535;
+  padding: 20px;
+}
+
+.footer_link {
+  color: #6d6d6d;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.footer_link:hover {
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

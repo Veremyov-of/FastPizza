@@ -1,0 +1,13 @@
+.footer {
+    background-color: #373535;
+    padding: 20px;
+    @extend %flex-2c;
+    &_link {
+        color: rgb(109, 109, 109);
+        font-size: 18px;
+        font-weight: 400;
+        &:hover {
+            color: #fff;
+        }
+    }
+}

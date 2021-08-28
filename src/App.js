@@ -8,6 +8,8 @@ import Overheader from './components/Overheader';
 import Navbar from "./components/Navbar";
 import Home from './components/Home';
 import Contacts from './components/Contacts';
+import Payment from "./components/Payment";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         </Route>
       </Switch>
       <Contacts />
+      <Payment />
+      <Footer />
     </Router>
   );
 }
