@@ -1,9 +1,10 @@
 //components
+import Pizza from './Pizza';
 
 export default function Home() {
     return (
-        <div>
-            
+        <div className="container">
+            <Pizza/>
         </div>        
     );
 }

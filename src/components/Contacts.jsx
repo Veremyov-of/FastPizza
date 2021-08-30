@@ -1,7 +1,7 @@
 export default function Contacts() {
     return (
         <div className="wrapp_contacts">
-            <div className="contacts">
+            <div className="contacts container">
                 <div className="contacts_main">
                     <div className="contacts_main_phone">
                         <img src="./img/contacts/phone.png" alt="img"/>
@@ -35,7 +35,7 @@ export default function Contacts() {
                     </div>    
                 </div> 
             </div>
-            <div className="info">
+            <div className="info container">
                 <div className="info_wrapp">
                     <a href="/" className="info_wrapp_link">Условия доставки</a>
                     <a href="/" className="info_wrapp_link">Договор оферты</a>
@@ -46,7 +46,7 @@ export default function Contacts() {
                     <a href="/" className="info_pay_link">Способы оплаты. Инструкция об оплате ЕРИП</a>
                 </div>
             </div>
-            <div className="address">
+            <div className="address container">
                 <div className="address_main">
                     <div className="address_main_text">119017, ул. Большая Полянка, 61 строение 1, Москва, Россия</div>
                     <div className="address_main_text">Интернет-магазин зарегистрирован в Торговом реестре РФ 01.11.2018г. Регистрационный номер 430674.</div>

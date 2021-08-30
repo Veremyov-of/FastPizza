@@ -13,8 +13,8 @@ export default function Navbar() {
                 <button className="navbar_container_support">Служба поддержки</button>
                 <div className="navbar_container_inner">
                     <div className="navbar_container_inner_shopCard">
-                        <div className="navbar_container_inner_shopCard_price">0<span>руб</span></div>
-                        <div className="navbar_container_inner_shopCard_product">0<span>товар</span></div>
+                        <div className="navbar_container_inner_shopCard_price">0<span> руб</span></div>
+                        <div className="navbar_container_inner_shopCard_product">0<span> товар</span></div>
                     </div>
                     <a href="/" className="navbar_container_inner_basket"><img src="./img/basket.png" alt="basket"/></a>
                 </div>
