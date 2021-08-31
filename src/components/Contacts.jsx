@@ -1,6 +1,6 @@
 export default function Contacts() {
     return (
-        <div className="wrapp_contacts">
+        <div className="wrapp_contacts section">
             <div className="contacts container">
                 <div className="contacts_main">
                     <div className="contacts_main_phone">

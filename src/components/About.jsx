@@ -2,7 +2,7 @@ import AboutOpen from "./AboutOpen";
 
 export default function About() {
     return (
-        <div className="about container">
+        <div className="about container ">
             <h1 className="about_title">Пицца в Москве с «Fast Pizza»</h1>
             <div className="about_wrapp">
                 <div className="about_wrapp_text">Проголодались, а в холодильнике пусто или не взяли домашний обед в офис? Всего один звонок, раз, два и пицца уже на вашем столе!</div>

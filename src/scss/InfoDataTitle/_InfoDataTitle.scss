@@ -1,0 +1,29 @@
+
+a[title]:hover:after {
+	content: attr(title);
+}
+[data-title] {position: relative}
+[data-title]:after {
+	content: attr(data-title);
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1000;
+	position: absolute;
+	top: 2em;
+	left: 0;
+	padding: 2px 8px;
+	font-size: 13px;
+	font-weight: 300;
+	white-space: wrap;
+	color: #fff;
+    background-color: #212121;
+}
+[data-title]:hover:after {
+	opacity: 1;
+	visibility: visible;
+	-moz-transition: all 0.2s ease-out 0.5s;
+	-webkit-transition: all 0.2s ease-out 0.5s;
+	-o-transition: all 0.2s ease-out 0.5s;
+	-ms-transition: all 0.2s ease-out 0.5s;
+	transition: all 0.2s ease-out 0.5s;
+}

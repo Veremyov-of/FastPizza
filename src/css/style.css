@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
-.overheader_stock, .overheader_phone, .overheader_work, .container_pizza .inner_pizza .pizza_choice, .wrapp_contacts .contacts_social_phone {
+.overheader_stock, .overheader_phone, .overheader_work, .container_pizza .inner_pizza .pizza_choice, .container_combo .inner_combo .combo_choice, .wrapp_contacts .contacts_social_phone {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,7 +15,7 @@
           flex-direction: column;
 }
 
-.navbar_container, .navbar_container_inner, .navbar_container_inner_basket, .container_pizza .title_pizza, .container_pizza .inner_pizza .pizza_info, .container_pizza .inner_pizza .pizza_wrapp, .container_pizza .inner_pizza .pizza_size_text, .wrapp_contacts .contacts_main_phone, .wrapp_contacts .contacts_main_time, .wrapp_contacts .contacts_main_mail, .wrapp_contacts .contacts_social_links, .wrapp_contacts .contacts_social_phone_logos, .footer {
+.navbar_container, .navbar_container_inner, .navbar_container_inner_basket, .container_pizza .title_pizza, .container_pizza .inner_pizza .pizza_wrapp, .container_pizza .inner_pizza .pizza_size_text, .container_combo .title_combo, .container_combo .inner_combo .combo_wrapp, .wrapp_contacts .contacts_main_phone, .wrapp_contacts .contacts_main_time, .wrapp_contacts .contacts_main_mail, .wrapp_contacts .contacts_social_links, .wrapp_contacts .contacts_social_phone_logos, .footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,7 +27,7 @@
           align-items: center;
 }
 
-.overheader, .navbar, .navbar_nav, .container_pizza .inner_pizza, .container_pizza .inner_pizza .pizza_size, .container_pizza .inner_pizza .pizza_addCheese, .container_pizza .inner_pizza .pizza_price, .wrapp_contacts .contacts, .wrapp_contacts .contacts_main, .wrapp_contacts .info, .wrapp_contacts .info_wrapp, .wrapp_contacts .address, .payment {
+.overheader, .navbar, .navbar_nav, .container_pizza .inner_pizza .pizza_size, .container_pizza .inner_pizza .pizza_addCheese, .container_pizza .inner_pizza .pizza_price, .container_combo .inner_combo .combo_addCheese, .container_combo .inner_combo .combo_price, .wrapp_contacts .contacts, .wrapp_contacts .contacts_main, .wrapp_contacts .info, .wrapp_contacts .info_wrapp, .wrapp_contacts .address, .payment {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,6 +61,10 @@ body {
 a {
   color: #000;
   text-decoration: none;
+}
+
+.section {
+  margin: 50px 0px;
 }
 
 .overheader {
@@ -240,12 +244,21 @@ a {
 }
 
 .container_pizza .inner_pizza {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 .container_pizza .inner_pizza .pizza {
-  margin: 10px 0;
+  margin: 10px 5px;
   position: relative;
   width: 300px;
   height: 610px;
@@ -254,6 +267,7 @@ a {
 }
 
 .container_pizza .inner_pizza .pizza_info {
+  display: block;
   cursor: pointer;
   width: 50px;
   height: 20px;
@@ -265,6 +279,15 @@ a {
   color: #B6B6B6;
   border: 1px solid #C4C4C4;
   border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .container_pizza .inner_pizza .pizza_info:hover {
@@ -409,6 +432,190 @@ a {
 }
 
 .container_pizza .inner_pizza .pizza_price_addBasket:hover {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  background-color: #FF9900;
+  color: #fff;
+}
+
+.container_combo {
+  padding: 0 10px;
+}
+
+.container_combo .title_combo {
+  height: 100px;
+  font-size: 38px;
+  font-weight: 400;
+}
+
+.container_combo .inner_combo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container_combo .inner_combo .combo {
+  margin: 10px 5px;
+  position: relative;
+  width: 300px;
+  height: 690px;
+  border-radius: 10px;
+  border: 1px solid #D0D0D0;
+}
+
+.container_combo .inner_combo .combo_info {
+  display: block;
+  cursor: pointer;
+  width: 50px;
+  height: 20px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #B6B6B6;
+  border: 1px solid #C4C4C4;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container_combo .inner_combo .combo_info:hover {
+  color: #616161;
+  border: 1px solid #616161;
+}
+
+.container_combo .inner_combo .combo_wrapp {
+  margin: 0 auto;
+  width: 210px;
+  height: 210px;
+  margin-top: 40px;
+}
+
+.container_combo .inner_combo .combo_wrapp_img {
+  width: 100%;
+  height: 100%;
+}
+
+.container_combo .inner_combo .combo_name {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+
+.container_combo .inner_combo .combo_composition {
+  color: #878686;
+  text-align: center;
+  margin: 5px auto;
+  font-size: 14px;
+  width: 238px;
+  height: 90px;
+}
+
+.container_combo .inner_combo .combo_addCheese {
+  cursor: pointer;
+  padding: 0 10px;
+  width: 270px;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: 1px solid #DCDCDC;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.container_combo .inner_combo .combo_addCheese_plus {
+  width: 20px;
+  height: 20px;
+}
+
+.container_combo .inner_combo .combo_addCheese_plus img {
+  width: 100%;
+  height: 100%;
+}
+
+.container_combo .inner_combo .combo_addCheese_text {
+  line-height: 30px;
+  height: 30px;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.container_combo .inner_combo .combo_addCheese_price {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.container_combo .inner_combo .combo_choice {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.container_combo .inner_combo .combo_choice_title {
+  height: 31px;
+  line-height: 31px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #878686;
+}
+
+.container_combo .inner_combo .combo_choice_select {
+  border: 1px solid #FF9900;
+  width: 200px;
+  height: 30px;
+  border-radius: 8px;
+  background-color: transparent;
+  outline: none;
+}
+
+.container_combo .inner_combo .combo_choice .select_two {
+  margin-bottom: 10px;
+}
+
+.container_combo .inner_combo .combo_price {
+  margin: 0 auto;
+  width: 200px;
+  height: 30px;
+}
+
+.container_combo .inner_combo .combo_price_text {
+  width: 85px;
+  height: 30px;
+  font-size: 500;
+  font-size: 21px;
+}
+
+.container_combo .inner_combo .combo_price_addBasket {
+  cursor: pointer;
+  background-color: transparent;
+  width: 85px;
+  height: 30px;
+  border: 1px solid #FF9900;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: normal;
+  color: #FF9900;
+}
+
+.container_combo .inner_combo .combo_price_addBasket:hover {
   -webkit-transition: all .2s;
   transition: all .2s;
   background-color: #FF9900;
@@ -626,5 +833,36 @@ a {
 
 .footer_link:hover {
   color: #fff;
+}
+
+a[title]:hover:after {
+  content: attr(title);
+}
+
+[data-title] {
+  position: relative;
+}
+
+[data-title]:after {
+  content: attr(data-title);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  position: absolute;
+  top: 2em;
+  left: 0;
+  padding: 2px 8px;
+  font-size: 13px;
+  font-weight: 300;
+  white-space: wrap;
+  color: #fff;
+  background-color: #212121;
+}
+
+[data-title]:hover:after {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.2s ease-out 0.5s;
+  transition: all 0.2s ease-out 0.5s;
 }
 /*# sourceMappingURL=style.css.map */

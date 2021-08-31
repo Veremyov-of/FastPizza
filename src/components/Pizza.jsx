@@ -3,14 +3,14 @@ import { useDispatch, useSelector } from "react-redux";
 
 export default function Home() {
     const despatch = useDispatch()
-    const pizza = useSelector(state => state.pizza);
+    const pizza = useSelector(state => state.pizza.pizza);
     return (
-        <div className="container_pizza">
+        <div className="container_pizza section">
             <h2 className="title_pizza">Пиццы</h2>
             <div className="inner_pizza">
                 {pizza.map((item, index) => (
                 <div key={index} className="pizza">
-                    <div className="pizza_info">инфо</div>
+                    <a className="pizza_info" data-title={item.infoHover}>инфо</a>
                     <div className="pizza_wrapp">
                         <img className="pizza_wrapp_img" src={item.imgUrl} alt="img-pizza"/>
                     </div>
