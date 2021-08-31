@@ -2,12 +2,12 @@ import { useDispatch, useSelector } from "react-redux";
 
 export default function Snacks() {
     const despatch = useDispatch();
-    const snacks = useSelector(state => state.desserts.desserts);
+    const desserts = useSelector(state => state.desserts.desserts);
     return (
         <div className="container_desserts">
             <h2 className="desserts_title">Десерты</h2>
             <div className="desserts_inner">
-                {snacks.map((item, index) => (
+                {desserts.map((item, index) => (
                     <div key={index} className="desserts">
                         <div className="desserts_img">
                             <img src={item.imgUrl} alt="img-desserts"/>
