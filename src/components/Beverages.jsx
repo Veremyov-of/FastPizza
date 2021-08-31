@@ -10,7 +10,7 @@ export default function Beverages() {
                 {beverages.map((item, index) => (
                     <div key={index} className="beverages">
                         <div className="beverages_img">
-                            <img src={item.imgUrl} alt="img-snacks"/>
+                            <img src={item.imgUrl} alt="img-beverages"/>
                         </div>
                         <h3 className="beverages_name">{item.name}</h3>
                         <div className="beverages_size">
