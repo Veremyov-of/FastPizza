@@ -15,7 +15,7 @@
           flex-direction: column;
 }
 
-.navbar_container, .navbar_container_inner, .navbar_container_inner_basket, .container_pizza .title_pizza, .container_pizza .inner_pizza .pizza_wrapp, .container_pizza .inner_pizza .pizza_size_text, .container_combo .title_combo, .container_combo .inner_combo .combo_wrapp, .wrapp_contacts .contacts_main_phone, .wrapp_contacts .contacts_main_time, .wrapp_contacts .contacts_main_mail, .wrapp_contacts .contacts_social_links, .wrapp_contacts .contacts_social_phone_logos, .footer {
+.navbar_container, .navbar_container_inner, .navbar_container_inner_basket, .container_pizza .title_pizza, .container_pizza .inner_pizza .pizza_wrapp, .container_pizza .inner_pizza .pizza_size_text, .container_combo .title_combo, .container_combo .inner_combo .combo_wrapp, .container_snacks .snacks_title, .container_snacks .snacks_inner .snacks_size_btn, .container_snacks .snacks_inner .snacks_wrapp_basket, .wrapp_contacts .contacts_main_phone, .wrapp_contacts .contacts_main_time, .wrapp_contacts .contacts_main_mail, .wrapp_contacts .contacts_social_links, .wrapp_contacts .contacts_social_phone_logos, .footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,7 +27,7 @@
           align-items: center;
 }
 
-.overheader, .navbar, .navbar_nav, .container_pizza .inner_pizza .pizza_size, .container_pizza .inner_pizza .pizza_addCheese, .container_pizza .inner_pizza .pizza_price, .container_combo .inner_combo .combo_addCheese, .container_combo .inner_combo .combo_price, .wrapp_contacts .contacts, .wrapp_contacts .contacts_main, .wrapp_contacts .info, .wrapp_contacts .info_wrapp, .wrapp_contacts .address, .payment {
+.overheader, .navbar, .navbar_nav, .container_pizza .inner_pizza .pizza_size, .container_pizza .inner_pizza .pizza_addCheese, .container_pizza .inner_pizza .pizza_price, .container_combo .inner_combo .combo_addCheese, .container_combo .inner_combo .combo_price, .container_snacks .snacks_inner .snacks_size, .container_snacks .snacks_inner .snacks_wrapp, .wrapp_contacts .contacts, .wrapp_contacts .contacts_main, .wrapp_contacts .info, .wrapp_contacts .info_wrapp, .wrapp_contacts .address, .payment {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -466,7 +466,7 @@ a {
   margin: 10px 5px;
   position: relative;
   width: 300px;
-  height: 690px;
+  height: 670px;
   border-radius: 10px;
   border: 1px solid #D0D0D0;
 }
@@ -616,6 +616,120 @@ a {
 }
 
 .container_combo .inner_combo .combo_price_addBasket:hover {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  background-color: #FF9900;
+  color: #fff;
+}
+
+.container_snacks {
+  padding: 0 10px;
+}
+
+.container_snacks .snacks_title {
+  text-align: center;
+  font-weight: 400;
+  font-size: 38px;
+  height: 100px;
+}
+
+.container_snacks .snacks_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container_snacks .snacks_inner .snacks {
+  width: 300px;
+  height: 430px;
+  margin: 10px 5px;
+  border-radius: 10px;
+  border: 1px solid #D0D0D0;
+}
+
+.container_snacks .snacks_inner .snacks_img {
+  margin: 0 auto;
+  width: 210px;
+  height: 210px;
+}
+
+.container_snacks .snacks_inner .snacks_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.container_snacks .snacks_inner .snacks_name {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+
+.container_snacks .snacks_inner .snacks_composition {
+  color: #878686;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 15px;
+  margin-top: 5px;
+  width: 238px;
+  height: 80px;
+}
+
+.container_snacks .snacks_inner .snacks_size {
+  margin: 0 auto;
+  border-radius: 5px;
+  width: 270px;
+  height: 35px;
+  background-color: #DCDCDC;
+}
+
+.container_snacks .snacks_inner .snacks_size_btn {
+  border-radius: 5px;
+  width: 135px;
+  height: 35px;
+}
+
+.container_snacks .snacks_inner .snacks_size .active_snacks {
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
+.container_snacks .snacks_inner .snacks_wrapp {
+  margin: 0 auto;
+  margin-top: 25px;
+  width: 200px;
+  height: 30px;
+}
+
+.container_snacks .snacks_inner .snacks_wrapp_price {
+  width: 85px;
+  height: 30px;
+  font-size: 500;
+  font-size: 21px;
+}
+
+.container_snacks .snacks_inner .snacks_wrapp_basket {
+  cursor: pointer;
+  background-color: transparent;
+  width: 85px;
+  height: 30px;
+  border: 1px solid #FF9900;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: normal;
+  color: #FF9900;
+}
+
+.container_snacks .snacks_inner .snacks_wrapp_basket:hover {
   -webkit-transition: all .2s;
   transition: all .2s;
   background-color: #FF9900;

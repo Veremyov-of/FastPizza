@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux";
-//components
 
 export default function Home() {
     const despatch = useDispatch()
