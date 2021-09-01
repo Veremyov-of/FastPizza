@@ -4,7 +4,7 @@ export default function Beverages() {
     const despatch = useDispatch();
     const beverages = useSelector(state => state.beverages.beverages);
     return (
-        <div className="container_beverages">
+        <div className="container_beverages section">
             <h2 className="beverages_title">Напитки</h2>
             <div className="beverages_inner">
                 {beverages.map((item, index) => (

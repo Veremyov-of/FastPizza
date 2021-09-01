@@ -8,19 +8,19 @@ import Beverages from './Beverages';
 import Juices from './Juices';
 
 import Slider from './Slider';
-
-
 export default function Home() {
     return (
-        <div className="container">
+        <div>
             <Slider/>
-            <Pizza/>
-            <Combo/>
-            <Snacks/>
-            <Desserts />
-            <Sauces />
-            <Beverages />
-            <Juices />
-        </div>        
+            <div className="container">
+                <Pizza/>
+                <Combo/>
+                <Snacks/>
+                <Desserts />
+                <Sauces />
+                <Beverages />
+                <Juices />
+            </div>  
+        </div>      
     );
 }

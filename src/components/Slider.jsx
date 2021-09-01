@@ -1,23 +1,26 @@
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Pagination} from 'swiper';
+import 'swiper/swiper.scss';
 
-// Import Swiper styles
-import "swiper/swiper-bundle.css"
-import "swiper/css/swiper.css"
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
 
-export default () => {
+SwiperCore.use([Pagination]);
+export default function Slider() {
   return (
-    <Swiper
-      spaceBetween={50}
-      slidesPerView={3}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
-    >
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-      ...
-    </Swiper>
+        <Swiper  className="slider"
+          spaceBetween={50}
+          slidesPerView={1}
+          pagination ={{clickable: true}}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          <SwiperSlide className="slider_item"><img src="./img/slider/img1.png" alt="img"/></SwiperSlide>
+          <SwiperSlide className="slider_item"><img src="./img/slider/img2.png" alt="img"/></SwiperSlide>
+          <SwiperSlide className="slider_item"><img src="./img/slider/img4.png" alt="img"/></SwiperSlide>
+          <SwiperSlide className="slider_item"><img src="./img/slider/img5.png" alt="img"/></SwiperSlide>
+          <SwiperSlide className="slider_item"><img src="./img/slider/img6.png" alt="img"/></SwiperSlide>
+          <SwiperSlide className="slider_item"><img src="./img/slider/img7.png" alt="img"/></SwiperSlide>
+        </Swiper>
   );
-};
+}

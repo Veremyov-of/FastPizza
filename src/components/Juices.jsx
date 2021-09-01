@@ -4,7 +4,7 @@ export default function Juices() {
     const despatch = useDispatch();
     const juices = useSelector(state => state.juices.juices);
     return (
-        <div className="container_juices">
+        <div className="container_juices section">
             <h2 className="juices_title">Соки</h2>
             <div className="juices_inner">
                 {juices.map((item, index) => (
