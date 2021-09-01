@@ -6,6 +6,7 @@ import { dessertsReducer } from './dessertsReducer';
 import { saucesReducer } from './saucesReducer';
 import { beveragesReducer } from './beveragesReducer';
 import { juicesReducer } from './juicesReducer';
+import { aboutReducer} from './aboutReducer';
 
 const rootReducer = combineReducers({
     pizza: pizzaReducer,
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
     sauces: saucesReducer,
     beverages: beveragesReducer,
     juices: juicesReducer,
+    about: aboutReducer,
     
 })
 export const store = createStore(rootReducer);

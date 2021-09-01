@@ -1132,8 +1132,12 @@ a {
   color: #fff;
 }
 
+.about {
+  margin-bottom: 50px;
+}
+
 .about_title {
-  color: #212121;
+  color: #313131;
   font-size: 38px;
   font-weight: 500;
 }
@@ -1168,6 +1172,50 @@ a {
   background-color: #fff;
   color: #FF9900;
   border: 1px solid #FF9900;
+}
+
+.aboutOpen {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.aboutOpen_title {
+  color: #313131;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.aboutOpen_text {
+  font-weight: 400;
+  font-size: 16px;
+  color: #585858;
+  margin-bottom: 20px;
+}
+
+.aboutOpen_wrapp {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.aboutOpen_wrapp ul li {
+  color: #FF9900;
+}
+
+.aboutOpen_wrapp ul li span {
+  color: #585858;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.aboutOpen_wish {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  font-weight: 400;
+  font-size: 16px;
+  color: #585858;
 }
 
 .wrapp_contacts {

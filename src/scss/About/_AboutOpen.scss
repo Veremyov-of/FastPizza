@@ -1,0 +1,39 @@
+.aboutOpen {
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    &_title {
+        color: #313131;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+    &_text {
+        font-weight: 400;
+        font-size: 16px;
+        color: #585858;
+        margin-bottom: 20px;
+    }
+    &_wrapp {
+        padding-left: 20px;
+        margin-bottom: 20px;
+        ul {
+            li {
+                color: #FF9900;
+                span {
+                    color: #585858;
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    &_wish {
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        font-weight: 400;
+        font-size: 16px;
+        color: #585858;
+    }
+}
