@@ -15,7 +15,7 @@
           flex-direction: column;
 }
 
-.navbar_container, .navbar_container_inner, .navbar_container_inner_basket, .container_pizza .title_pizza, .container_pizza .inner_pizza .pizza_wrapp, .container_pizza .inner_pizza .pizza_size_text, .container_combo .title_combo, .container_combo .inner_combo .combo_wrapp, .container_snacks .snacks_title, .container_snacks .snacks_inner .snacks_size_btn, .container_snacks .snacks_inner .snacks_wrapp_basket, .container_desserts .desserts_title, .container_desserts .desserts_inner .desserts_wrapp_basket, .container_sauces .sauces_title, .container_sauces .sauces_inner .sauces_wrapp_basket, .container_beverages .beverages_title, .container_beverages .beverages_inner .beverages_size_btn, .container_beverages .beverages_inner .beverages_wrapp_basket, .container_juices .juices_title, .container_juices .juices_inner .juices_size, .container_juices .juices_inner .juices_wrapp_basket, .wrapp_contacts .contacts_main_phone, .wrapp_contacts .contacts_main_time, .wrapp_contacts .contacts_main_mail, .wrapp_contacts .contacts_social_links, .wrapp_contacts .contacts_social_phone_logos, .footer {
+.navbar_container, .navbar_container_inner, .navbar_container_inner_basket, .stock_title, .stock_wrapp, .container_pizza .title_pizza, .container_pizza .inner_pizza .pizza_wrapp, .container_pizza .inner_pizza .pizza_size_text, .container_combo .title_combo, .container_combo .inner_combo .combo_wrapp, .container_snacks .snacks_title, .container_snacks .snacks_inner .snacks_size_btn, .container_snacks .snacks_inner .snacks_wrapp_basket, .container_desserts .desserts_title, .container_desserts .desserts_inner .desserts_wrapp_basket, .container_sauces .sauces_title, .container_sauces .sauces_inner .sauces_wrapp_basket, .container_beverages .beverages_title, .container_beverages .beverages_inner .beverages_size_btn, .container_beverages .beverages_inner .beverages_wrapp_basket, .container_juices .juices_title, .container_juices .juices_inner .juices_size, .container_juices .juices_inner .juices_wrapp_basket, .wrapp_contacts .contacts_main_phone, .wrapp_contacts .contacts_main_time, .wrapp_contacts .contacts_main_mail, .wrapp_contacts .contacts_social_links, .wrapp_contacts .contacts_social_phone_logos, .footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,6 +37,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -231,6 +235,70 @@ a {
 .navbar_container_inner_basket:hover img {
   -webkit-transform: rotate(10deg);
           transform: rotate(10deg);
+}
+
+.stock {
+  position: relative;
+  padding: 50px 0px 100px;
+}
+
+.stock_title {
+  height: 100px;
+  text-align: center;
+  width: 100%;
+  font-size: 38px;
+  font-weight: 300;
+  color: #313131;
+}
+
+.stock_wrapp {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.stock_wrapp_item {
+  margin: 10px 5px;
+  border: 1px solid #D0D0D0;
+  padding: 5px;
+  border-radius: 10px;
+  max-width: 400px;
+  min-height: 315px;
+}
+
+.stock_wrapp_item_img {
+  max-width: 400px;
+  height: auto;
+}
+
+.stock_wrapp_item_img img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.stock_wrapp_item_title {
+  margin: 10px 0px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.stock_wrapp_item_text {
+  padding: 0px 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #878686;
+}
+
+.stock_inner {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  color: #313131;
+}
+
+.stock_inner_link:hover {
+  color: #FF9900;
 }
 
 .slider {
@@ -1133,6 +1201,7 @@ a {
 }
 
 .about {
+  padding: 0px 5px;
   margin-bottom: 50px;
 }
 
@@ -1175,6 +1244,7 @@ a {
 }
 
 .aboutOpen {
+  padding: 0px 5px;
   position: relative;
   margin-top: 40px;
   margin-bottom: 50px;
@@ -1210,7 +1280,7 @@ a {
 }
 
 .aboutOpen_wish {
-  bottom: 0;
+  bottom: -40px;
   right: 0;
   position: absolute;
   font-weight: 400;

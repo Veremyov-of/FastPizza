@@ -6,6 +6,7 @@ import Desserts from './Desserts';
 import Sauces from './Sauces';
 import Beverages from './Beverages';
 import Juices from './Juices';
+import About from "./About";
 
 import Slider from './Slider';
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
                 <Sauces />
                 <Beverages />
                 <Juices />
+                <About />
             </div>  
         </div>      
     );

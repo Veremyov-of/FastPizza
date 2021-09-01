@@ -4,7 +4,7 @@ export default function Home() {
     const despatch = useDispatch()
     const pizza = useSelector(state => state.pizza.pizza);
     return (
-        <div className="container_pizza section">
+        <div id="pizza" className="container_pizza section">
             <h2 className="title_pizza">Пиццы</h2>
             <div className="inner_pizza">
                 {pizza.map((item, index) => (

@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 export default function Navbar() {
     return (
         <div className="navbar container">
             <div className="navbar_nav">
-                <a href="/" className="navbar_nav_link">Пиццы</a>
-                <a href="/" className="navbar_nav_link">Комбо</a>
-                <a href="/" className="navbar_nav_link">Закуски</a>
-                <a href="/" className="navbar_nav_link">Напитки</a>
-                <a href="/" className="navbar_nav_link">Акции</a>
+                <a href="#pizza" className="navbar_nav_link">Пиццы</a>
+                <a href="#combo" className="navbar_nav_link">Комбо</a>
+                <a href="#snacks" className="navbar_nav_link">Закуски</a>
+                <a href="#beverages" className="navbar_nav_link">Напитки</a>
+                <Link to="/stock" className="navbar_nav_link">Акции</Link>
                 <a href="/" className="navbar_nav_link">Доставка</a>
             </div>
             <div className="navbar_container">

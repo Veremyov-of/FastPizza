@@ -4,7 +4,7 @@ export default function Snacks() {
     const despatch = useDispatch();
     const snacks = useSelector(state => state.snacks.snacks);
     return (
-        <div className="container_snacks section">
+        <div id="snacks" className="container_snacks section">
             <h2 className="snacks_title">Закуски</h2>
             <div className="snacks_inner">
                 {snacks.map((item, index) => (

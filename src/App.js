@@ -5,9 +5,11 @@ import "./css/style.css";
 //components
 import Overheader from './components/Overheader';
 import Navbar from "./components/Navbar";
-import Home from './components/Home';
 
-import About from "./components/About";
+import Home from './components/Home';
+import Stock from './components/Stock';
+
+
 import Contacts from './components/Contacts';
 import Payment from "./components/Payment";
 import Footer from "./components/Footer";
@@ -21,8 +23,10 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
+        <Route path="/stock">
+          <Stock />
+        </Route>
       </Switch>
-      <About />
       <Contacts />
       <Payment />
       <Footer />

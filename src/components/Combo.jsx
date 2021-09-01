@@ -5,7 +5,7 @@ export default function Combo() {
     const despatch = useDispatch()
     const combo = useSelector(state => state.combo.combo);
     return (
-        <div className="container_combo section">
+        <div id="combo" className="container_combo section">
             <h2 className="title_combo">Комбо</h2>
             <div className="inner_combo">
                 {combo.map((item, index) => (
