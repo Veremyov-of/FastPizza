@@ -4,7 +4,7 @@ import "./css/style.css";
 
 //components
 import Overheader from './components/Overheader';
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 
 import Home from './components/Home';
 import Stock from './components/Stock';
@@ -13,23 +13,26 @@ import Stock from './components/Stock';
 import Contacts from './components/Contacts';
 import Payment from "./components/Payment";
 import Footer from "./components/Footer";
+import Basket from './components/Basket';
 
 function App() {
   return (
     <Router>
-      <Overheader />
-      <Navbar />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/stock">
-          <Stock />
-        </Route>
-      </Switch>
-      <Contacts />
-      <Payment />
-      <Footer />
+        <Overheader />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/stock">
+            <Stock />
+          </Route>
+          <Route path="/basket">
+            <Basket />
+          </Route>
+        </Switch>
+        <Contacts />
+        <Payment />
+        <Footer />
     </Router>
   );
 }

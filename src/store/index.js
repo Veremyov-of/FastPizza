@@ -1,5 +1,10 @@
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
 
+// API
+import logger from "redux-logger";
+
+
+//states
 import { stockReducer } from "./stockReducer";
 
 import { pizzaReducer } from "./pizzaReducer";
@@ -9,6 +14,8 @@ import { dessertsReducer } from './dessertsReducer';
 import { saucesReducer } from './saucesReducer';
 import { beveragesReducer } from './beveragesReducer';
 import { juicesReducer } from './juicesReducer';
+import { basketReducer } from "./basketReducer";
+import { basketSumReducer } from "./basketSumReducer";
 
 
 import { aboutReducer} from './aboutReducer';
@@ -23,6 +30,8 @@ const rootReducer = combineReducers({
     beverages: beveragesReducer,
     juices: juicesReducer,
     about: aboutReducer,
+    basket: basketReducer,
+    basketSum: basketSumReducer,
     
 })
-export const store = createStore(rootReducer);
+export const store = createStore(rootReducer, applyMiddleware(logger));

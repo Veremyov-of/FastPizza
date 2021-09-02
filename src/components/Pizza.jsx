@@ -3,6 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 export default function Home() {
     const despatch = useDispatch()
     const pizza = useSelector(state => state.pizza.pizza);
+    const addBasket = (item) => {
+        despatch({type: 'ADD_BASKET', payload: item});
+        despatch({type: 'ADD_BASKET_SUM', payload: item.price})
+    }
     return (
         <div id="pizza" className="container_pizza section">
             <h2 className="title_pizza">Пиццы</h2>
@@ -38,8 +42,8 @@ export default function Home() {
                         </select>
                     </div>
                     <div className="pizza_price">
-                        <div className="pizza_price_text">{item.price}</div>
-                        <button className="pizza_price_addBasket">в корзину</button>
+                        <div className="pizza_price_text">{item.price} руб</div>
+                        <button onClick={() => addBasket(item)} className="pizza_price_addBasket">в корзину</button>
                     </div>
                 </div>
                 ))}

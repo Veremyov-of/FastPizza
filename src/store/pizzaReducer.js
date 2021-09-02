@@ -2,11 +2,12 @@ const initialState = {
     pizza: [
         {
             name: 'Пицца Маргарита',
+            sum : 1,
             composition: 'Основа: Томатный соус Состав: Сыр моцарелла, томаты.',
             size: 30,
             addCheese: false,
             imgUrl: './img/pizza/img1.png',
-            price: '11.9 руб',
+            price: 11.9,
             infoHover: `Пищевая ценность продукта на 100 г:
                 Энергетическая ценность 202,2 ккал
                 Углеводы 26,5 г
@@ -20,11 +21,12 @@ const initialState = {
         },
         {
             name: 'Пицца Маргарита',
+            sum : 1,
             composition: 'Основа: Томатный соус Состав: Сыр моцарелла, томаты.',
             size: 30,
             addCheese: false,
             imgUrl: './img/pizza/img1.png',
-            price: '11.9 руб',
+            price: 20.9,
             infoHover: `Пищевая ценность продукта на 100 г:
                 Энергетическая ценность 202,2 ккал
                 Углеводы 26,5 г
@@ -38,11 +40,12 @@ const initialState = {
         },
         {
             name: 'Пицца Маргарита',
+            sum : 1,
             composition: 'Основа: Томатный соус Состав: Сыр моцарелла, томаты.',
             size: 30,
             addCheese: false,
             imgUrl: './img/pizza/img1.png',
-            price: '11.9 руб',
+            price: 30.1,
             infoHover: `Пищевая ценность продукта на 100 г:
                 Энергетическая ценность 202,2 ккал
                 Углеводы 26,5 г
@@ -56,11 +59,12 @@ const initialState = {
         },
         {
             name: 'Пицца Маргарита',
+            sum : 1,
             composition: 'Основа: Томатный соус Состав: Сыр моцарелла, томаты.',
             size: 30,
             addCheese: false,
             imgUrl: './img/pizza/img1.png',
-            price: '11.9 руб',
+            price: 30.1,
             infoHover: `Пищевая ценность продукта на 100 г:
                 Энергетическая ценность 202,2 ккал
                 Углеводы 26,5 г
