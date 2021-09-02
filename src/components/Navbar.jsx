@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 export default function Navbar() {
     return (
-        <div className="navbar container">
+        <div className="navbar_wrapp">
+            <div className="navbar container">
             <div className="navbar_nav">
-                <a href="#pizza" className="navbar_nav_link">Пиццы</a>
+                <a href="/#pizza" className="navbar_nav_link">Пиццы</a>
                 <a href="#combo" className="navbar_nav_link">Комбо</a>
                 <a href="#snacks" className="navbar_nav_link">Закуски</a>
                 <a href="#beverages" className="navbar_nav_link">Напитки</a>
@@ -20,6 +21,7 @@ export default function Navbar() {
                     <a href="/" className="navbar_container_inner_basket"><img src="./img/basket.png" alt="basket"/></a>
                 </div>
             </div>
+        </div>
         </div>
     );
 }

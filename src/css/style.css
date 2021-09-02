@@ -67,10 +67,6 @@ a {
   text-decoration: none;
 }
 
-.section {
-  margin-bottom: 60px;
-}
-
 .overheader {
   margin-bottom: 20px;
   -ms-flex-wrap: wrap;
@@ -143,6 +139,17 @@ a {
 .overheader_work_time {
   font-size: 18px;
   font-weight: 500;
+}
+
+.navbar_wrapp {
+  background-color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  -webkit-box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.2);
 }
 
 .navbar {
@@ -259,7 +266,7 @@ a {
 .stock_wrapp_item {
   margin: 10px 5px;
   border: 1px solid #D0D0D0;
-  padding: 5px;
+  padding: 7px;
   border-radius: 10px;
   max-width: 400px;
   min-height: 315px;
@@ -284,7 +291,7 @@ a {
 }
 
 .stock_wrapp_item_text {
-  padding: 0px 5px;
+  padding: 5px 5px;
   font-size: 16px;
   font-weight: 400;
   color: #878686;
@@ -304,7 +311,6 @@ a {
 .slider {
   max-width: 100%;
   max-height: auto;
-  margin-bottom: 50px;
 }
 
 .slider_item {
@@ -321,6 +327,7 @@ a {
 
 .container_pizza {
   padding: 0 10px;
+  padding-top: 50px;
 }
 
 .container_pizza .title_pizza {
@@ -526,6 +533,7 @@ a {
 
 .container_combo {
   padding: 0 10px;
+  padding-top: 50px;
 }
 
 .container_combo .title_combo {
@@ -710,6 +718,7 @@ a {
 
 .container_snacks {
   padding: 0 10px;
+  padding-top: 50px;
 }
 
 .container_snacks .snacks_title {
@@ -824,6 +833,7 @@ a {
 
 .container_desserts {
   padding: 0 10px;
+  padding-top: 50px;
 }
 
 .container_desserts .desserts_title {
@@ -919,6 +929,7 @@ a {
 
 .container_sauces {
   padding: 0 10px;
+  padding-top: 50px;
 }
 
 .container_sauces .sauces_title {
@@ -1004,6 +1015,7 @@ a {
 
 .container_beverages {
   padding: 0 10px;
+  padding-top: 50px;
 }
 
 .container_beverages .beverages_title {
@@ -1108,6 +1120,8 @@ a {
 
 .container_juices {
   padding: 0 10px;
+  padding-top: 50px;
+  margin-bottom: 60px;
 }
 
 .container_juices .juices_title {

@@ -1,6 +1,7 @@
 .container_juices {
     padding: 0 10px;
-   
+    padding-top: 50px;
+    margin-bottom: 60px;
     .juices_title {
         @extend %flex-2c;
         text-align: center;

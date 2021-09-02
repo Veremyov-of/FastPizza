@@ -1,5 +1,6 @@
 .container_pizza {
     padding: 0 10px;
+    padding-top: 50px;
     .title_pizza {
         @extend %flex-2c;
         height: 100px;

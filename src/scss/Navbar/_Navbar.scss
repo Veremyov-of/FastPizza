@@ -1,3 +1,11 @@
+.navbar_wrapp {
+    background-color: #fff;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
+}
 .navbar {
     @extend %flex-c-s;
     flex-wrap: wrap;
