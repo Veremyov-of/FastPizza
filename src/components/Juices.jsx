@@ -1,8 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Juices() {
-    const despatch = useDispatch();
-    const juices = useSelector(state => state.juices.juices);
+    const dispatch = useDispatch();
+    const juices = useSelector(state => state.juices);
+    const addBasket = (item) => {
+        dispatch({type: 'ADD_BASKET', payload: item});
+        dispatch({type: 'ADD_BASKET_SUM', payload: item.price})
+    }
     return (
         <div className="container_juices section">
             <h2 className="juices_title">Соки</h2>
@@ -14,8 +18,8 @@ export default function Juices() {
                         </div>
                         <h3 className="juices_name">{item.name}</h3>
                         <div className="juices_size">1л</div>
-                        <div className="juices_wrapp">
-                            <div className="juices_wrapp_price">{item.price}</div>
+                        <div onClick={() => addBasket(item)} className="juices_wrapp">
+                            <div className="juices_wrapp_price">{item.price} руб</div>
                             <div className="juices_wrapp_basket">в корзину</div>
                         </div>
                     </div>

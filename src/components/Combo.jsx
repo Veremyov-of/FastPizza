@@ -3,10 +3,14 @@ import { useDispatch, useSelector } from "react-redux";
 
 export default function Combo() {
     const dispatch = useDispatch()
-    const combo = useSelector(state => state.combo.combo);
+    const combo = useSelector(state => state.combo);
     const addBasket = (item) => {
         dispatch({type: 'ADD_BASKET', payload: item});
         dispatch({type: 'ADD_BASKET_SUM', payload: item.price})
+    }
+    const addCheese = (item) => {
+        const indexItem = combo.indexOf(item);
+        dispatch({type: 'ADD_CHEESE_COMBO', payload: indexItem});
     }
     return (
         <div id="combo" className="container_combo section">
@@ -31,9 +35,9 @@ export default function Combo() {
                             <option>Ветчина и грибы</option>
                         </select>
                     </div>
-                    <button className="combo_addCheese active_addCheese">
+                    <button onClick={() => addCheese(item)} className={`combo_addCheese ${item.addCheese ? 'active_addCheese': ''}`}>
                         <div className="combo_addCheese_plus">
-                            <img src="./img/plus.png" alt="img-plus"/>
+                            <img  src={`${item.addCheese ? './img/checkMark.png': './img/plus.png'}`} alt="img-plus"/>
                         </div>
                         <div className="combo_addCheese_text">Дополнительный сыр</div>
                         <div className="combo_addCheese_price">1.9руб</div>

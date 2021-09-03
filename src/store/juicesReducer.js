@@ -1,25 +1,23 @@
-const initialState = {
-    juices: [
+const initialState = [
         {
             name: "Сок рич ананас",
-            size: '0.5л',
-            price: '11.9руб',
+            size: true,
+            price: 3,
             imgUrl: './img/juices/img1.png'
         },
         {
             name: "Сок рич ананас",
-            size: '0.5л',
-            price: '11.9руб',
+            size: true,
+            price: 3,
             imgUrl: './img/juices/img1.png'
         },
         {
             name: "Сок рич ананас",
-            size: '0.5л',
-            price: '11.9руб',
+            size: true,
+            price: 3,
             imgUrl: './img/juices/img1.png'
         },
     ]
-}
 
 export const juicesReducer = (state = initialState, action) => {
     switch(action.type) {

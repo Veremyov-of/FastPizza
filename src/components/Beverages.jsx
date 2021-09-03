@@ -1,8 +1,17 @@
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Beverages() {
-    const despatch = useDispatch();
-    const beverages = useSelector(state => state.beverages.beverages);
+    const dispatch = useDispatch();
+    const beverages = useSelector(state => state.beverages);
+    
+    const addBasket = (item) => {
+        dispatch({type: 'ADD_BASKET', payload: item});
+        dispatch({type: 'ADD_BASKET_SUM', payload: item.price})
+    }
+    const selectionSize = (item) => {
+        const indexItem = beverages.indexOf(item);
+        dispatch({type: 'SELECTION_SIZE_BEVERAGES', payload: indexItem});
+    }
     return (
         <div id="beverages" className="container_beverages section">
             <h2 className="beverages_title">Напитки</h2>
@@ -13,12 +22,13 @@ export default function Beverages() {
                             <img src={item.imgUrl} alt="img-beverages"/>
                         </div>
                         <h3 className="beverages_name">{item.name}</h3>
-                        <div className="beverages_size">
-                            <div className="beverages_size_btn active_snacks">0.5л</div>
-                            <div className="beverages_size_btn">1л</div>
+                        <div onClick={() => selectionSize(item)} className="beverages_size">
+                            <div className={`beverages_size_btn ${item.size ? '' : 'active_snacks'}`}>0.5л</div>
+                            <div className={`beverages_size_btn ${item.size ? 'active_snacks' : ''}`}>1л</div>
+                            
                         </div>
-                        <div className="beverages_wrapp">
-                            <div className="beverages_wrapp_price">{item.price}</div>
+                        <div onClick={() => addBasket(item)} className="beverages_wrapp">
+                            <div className="beverages_wrapp_price">{item.price} руб</div>
                             <div className="beverages_wrapp_basket">в корзину</div>
                         </div>
                     </div>

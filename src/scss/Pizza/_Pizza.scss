@@ -68,6 +68,7 @@
                 height: 100px;
             }
             &_size {
+                border: none;
                 margin: 0 auto;
                 @extend %flex-c-s;
                 width: 210px;

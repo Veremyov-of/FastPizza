@@ -45,9 +45,12 @@
                 height: 80px;
             }
             &_size {
+                cursor: pointer;
                 @extend %flex-c-s;
+                border: none;
                 margin: 0 auto;
                 border-radius: 5px;
+                font-size: 15px;
                 width: 270px;
                 height: 35px;
                 background-color: #DCDCDC;

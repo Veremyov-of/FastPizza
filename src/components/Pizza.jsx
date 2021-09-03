@@ -9,12 +9,12 @@ export default function Home() {
     }
     const selectionSize = (item) => {
         const indexItem = pizza.indexOf(item);
-        dispatch({type: 'SELECTION_SIZE', payload: indexItem});
+        dispatch({type: 'SELECTION_SIZE_PIZZA', payload: indexItem});
     }
 
     const addCheese = (item) => {
         const indexItem = pizza.indexOf(item);
-        dispatch({type: 'ADD_CHEESE', payload: indexItem});
+        dispatch({type: 'ADD_CHEESE_PIZZA', payload: indexItem});
     }
 
 
@@ -34,10 +34,10 @@ export default function Home() {
                     <div className="pizza_composition">
                         {item.composition}
                     </div>
-                    <div className="pizza_size">
-                        <button onClick={() => selectionSize(item)} className={`pizza_size_text ${item.size ? '' : "active_size"}`}>30 см</button>
-                        <button onClick={() => selectionSize(item)} className={`pizza_size_text ${item.size ? "active_size" : ''}`}>40 см</button>
-                    </div>
+                    <button className="pizza_size">
+                        <div onClick={() => selectionSize(item)} className={`pizza_size_text ${item.size ? '' : "active_size"}`}>30 см</div>
+                        <div onClick={() => selectionSize(item)} className={`pizza_size_text ${item.size ? "active_size" : ''}`}>40 см</div>
+                    </button>
                     <button onClick={() => addCheese(item)} className={`pizza_addCheese ${item.addCheese ? 'active_addCheese': ''}`}>
                         <div className="pizza_addCheese_plus">
                             <img src={`${item.addCheese ? './img/checkMark.png': './img/plus.png'}`} alt="img-plus"/>
@@ -53,7 +53,7 @@ export default function Home() {
                         </select>
                     </div>
                     <div className="pizza_price">
-                        <div className="pizza_price_text">{item.price} руб</div>
+                        <div className="pizza_price_text">{item.size ? item.bigPrice : item.price} руб</div>
                         <button onClick={() => addBasket(item)} className="pizza_price_addBasket">в корзину</button>
                     </div>
                 </div>

@@ -1,5 +1,4 @@
-const initialState = {
-    combo: [
+const initialState = [
         {
             name: 'Комбо S',
             composition: 'Пицца (30 см) на выбор, наггетсы куриные большая порция (12-15 штук, 240-255 грамм), крылышки куриные большая порция (5-6 штук, 240-255 грамм).',
@@ -36,11 +35,16 @@ const initialState = {
             price: 11.9,
             infoHover: `Вес 1400±50 грамм`
         },
-    ]
-}
+]
 
 export const comboReducer = (state = initialState, action) => {
     switch(action.type) {
+        case 'ADD_CHEESE_COMBO': {
+            const index = action.payload;
+            const newState = [...state];
+            newState[index] = {...state[index], addCheese: !newState[index].addCheese};
+            return newState;
+        }
         default:
             return state
     }

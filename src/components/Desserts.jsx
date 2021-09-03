@@ -1,8 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Snacks() {
-    const despatch = useDispatch();
-    const desserts = useSelector(state => state.desserts.desserts);
+    const dispatch = useDispatch();
+    const desserts = useSelector(state => state.desserts);
+    const addBasket = (item) => {
+        dispatch({type: 'ADD_BASKET', payload: item});
+        dispatch({type: 'ADD_BASKET_SUM', payload: item.price})
+    }
     return (
         <div className="container_desserts section">
             <h2 className="desserts_title">Десерты</h2>
@@ -15,8 +19,8 @@ export default function Snacks() {
                         <h3 className="desserts_name">{item.name}</h3>
                         <div className="desserts_composition">{item.composition}</div>
                         <div className="desserts_wrapp">
-                            <div className="desserts_wrapp_price">{item.price}</div>
-                            <div className="desserts_wrapp_basket">в корзину</div>
+                            <div className="desserts_wrapp_price">{item.price} руб</div>
+                            <div onClick={() => addBasket(item)} className="desserts_wrapp_basket">в корзину</div>
                         </div>
                     </div>
                 ))}

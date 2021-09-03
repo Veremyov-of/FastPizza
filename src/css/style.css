@@ -419,6 +419,7 @@ a {
 }
 
 .container_pizza .inner_pizza .pizza_size {
+  border: none;
   margin: 0 auto;
   width: 210px;
   height: 35px;
@@ -663,6 +664,11 @@ a {
   font-weight: 500;
 }
 
+.container_combo .inner_combo .combo .active_addCheese {
+  border: 1px solid #FF9900;
+  color: #FF9900;
+}
+
 .container_combo .inner_combo .combo_choice {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -785,8 +791,11 @@ a {
 }
 
 .container_snacks .snacks_inner .snacks_size {
+  cursor: pointer;
+  border: none;
   margin: 0 auto;
   border-radius: 5px;
+  font-size: 15px;
   width: 270px;
   height: 35px;
   background-color: #DCDCDC;
