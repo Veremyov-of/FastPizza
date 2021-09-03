@@ -1,0 +1,87 @@
+.basket {
+    margin: 0 auto;
+    margin-top: 40px;
+    max-width: 900px;
+    &_title {
+        text-align: center;
+        height: 90px;
+        width: 100%;
+        color: #313131;
+        font-size: 60px;
+        font-weight: 400;
+    }
+    &_wrapp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .sum {
+            font-size: 20px;
+        }
+        &_item {
+            margin: 10px 0px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            &_inner {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &_img {
+                    width: 100px;
+                    height: 100px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                &_name {
+                    margin-left: 20px;
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+                &_size {
+                    margin-left: 20px;
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+            }
+            &_funBlock {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &_price {
+                    font-size: 20px;
+                    font-weight: 500;
+
+                }
+            }
+        }
+    }
+
+    &_group {
+        margin: 50px 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &_link {
+            @extend %flex-2c;
+            width: 180px;
+            height: 50px;
+            border-radius: 7px;
+            font-size: 18px;
+            border: 1px solid #878686;
+        }
+        &_btn {
+            cursor: pointer;
+            width: 170px;
+            height: 50px;
+            background-color: #FF9900;
+            color: #fff;
+            font-size: 19px;
+            border-radius: 7px;
+            border: none;
+        }
+    }
+}
