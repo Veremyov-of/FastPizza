@@ -7,8 +7,9 @@ export const basketReducer = (state = initialState, action) => {
         case 'ADD_BASKET':
             for(let i = 0; i < state.basket.length; i++) {
                 if(state.basket[i].name === action.payload.name) {
+                    if(state.basket[i].size === action.payload.size)
                     state.basket[i].sum += 1;
-                    return state
+                    return state;
                 }
             }
             state.basket.push(action.payload);

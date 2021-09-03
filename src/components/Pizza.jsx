@@ -1,12 +1,23 @@
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Home() {
-    const despatch = useDispatch()
-    const pizza = useSelector(state => state.pizza.pizza);
+    const dispatch = useDispatch()
+    const pizza = useSelector(state => state.pizza);
     const addBasket = (item) => {
-        despatch({type: 'ADD_BASKET', payload: item});
-        despatch({type: 'ADD_BASKET_SUM', payload: item.price})
+        dispatch({type: 'ADD_BASKET', payload: item});
+        dispatch({type: 'ADD_BASKET_SUM', payload: item.price})
     }
+    const selectionSize = (item) => {
+        const indexItem = pizza.indexOf(item);
+        dispatch({type: 'SELECTION_SIZE', payload: indexItem});
+    }
+
+    const addCheese = (item) => {
+        const indexItem = pizza.indexOf(item);
+        dispatch({type: 'ADD_CHEESE', payload: indexItem});
+    }
+
+
     return (
         <div id="pizza" className="container_pizza section">
             <h2 className="title_pizza">Пиццы</h2>
@@ -24,12 +35,12 @@ export default function Home() {
                         {item.composition}
                     </div>
                     <div className="pizza_size">
-                        <button className="pizza_size_text active_size">30 см</button>
-                        <button className="pizza_size_text">40 см</button>
+                        <button onClick={() => selectionSize(item)} className={`pizza_size_text ${item.size ? '' : "active_size"}`}>30 см</button>
+                        <button onClick={() => selectionSize(item)} className={`pizza_size_text ${item.size ? "active_size" : ''}`}>40 см</button>
                     </div>
-                    <button className="pizza_addCheese">
+                    <button onClick={() => addCheese(item)} className={`pizza_addCheese ${item.addCheese ? 'active_addCheese': ''}`}>
                         <div className="pizza_addCheese_plus">
-                            <img src="./img/plus.png" alt="img-plus"/>
+                            <img src={`${item.addCheese ? './img/checkMark.png': './img/plus.png'}`} alt="img-plus"/>
                         </div>
                         <div className="pizza_addCheese_text">Дополнительный сыр</div>
                         <div className="pizza_addCheese_price">1.9руб</div>

@@ -477,6 +477,11 @@ a {
   font-weight: 500;
 }
 
+.container_pizza .inner_pizza .pizza .active_addCheese {
+  border: 1px solid #FF9900;
+  color: #FF9900;
+}
+
 .container_pizza .inner_pizza .pizza_choice {
   margin-top: 15px;
   margin-bottom: 25px;

@@ -2,8 +2,12 @@ import { useDispatch, useSelector } from "react-redux";
 //components
 
 export default function Combo() {
-    const despatch = useDispatch()
+    const dispatch = useDispatch()
     const combo = useSelector(state => state.combo.combo);
+    const addBasket = (item) => {
+        dispatch({type: 'ADD_BASKET', payload: item});
+        dispatch({type: 'ADD_BASKET_SUM', payload: item.price})
+    }
     return (
         <div id="combo" className="container_combo section">
             <h2 className="title_combo">Комбо</h2>
@@ -27,7 +31,7 @@ export default function Combo() {
                             <option>Ветчина и грибы</option>
                         </select>
                     </div>
-                    <button className="combo_addCheese">
+                    <button className="combo_addCheese active_addCheese">
                         <div className="combo_addCheese_plus">
                             <img src="./img/plus.png" alt="img-plus"/>
                         </div>
@@ -47,8 +51,8 @@ export default function Combo() {
                     </div>
                     
                     <div className="combo_price">
-                        <div className="combo_price_text">{item.price}</div>
-                        <button className="combo_price_addBasket">в корзину</button>
+                        <div className="combo_price_text">{item.price} руб</div>
+                        <button onClick={() => addBasket(item)} className="combo_price_addBasket">в корзину</button>
                     </div>
                 </div>
                 ))}

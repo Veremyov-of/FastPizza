@@ -1,10 +1,9 @@
-const initialState = {
-    pizza: [
+const initialState = [
         {
             name: 'Пицца Маргарита',
             sum : 1,
             composition: 'Основа: Томатный соус Состав: Сыр моцарелла, томаты.',
-            size: 30,
+            size: false,
             addCheese: false,
             imgUrl: './img/pizza/img1.png',
             price: 11.9,
@@ -23,7 +22,7 @@ const initialState = {
             name: 'Пицца Маргарита',
             sum : 1,
             composition: 'Основа: Томатный соус Состав: Сыр моцарелла, томаты.',
-            size: 30,
+            size: false,
             addCheese: false,
             imgUrl: './img/pizza/img1.png',
             price: 20.9,
@@ -42,7 +41,7 @@ const initialState = {
             name: 'Пицца Маргарита',
             sum : 1,
             composition: 'Основа: Томатный соус Состав: Сыр моцарелла, томаты.',
-            size: 30,
+            size: false,
             addCheese: false,
             imgUrl: './img/pizza/img1.png',
             price: 30.1,
@@ -61,7 +60,7 @@ const initialState = {
             name: 'Пицца Маргарита',
             sum : 1,
             composition: 'Основа: Томатный соус Состав: Сыр моцарелла, томаты.',
-            size: 30,
+            size: false,
             addCheese: false,
             imgUrl: './img/pizza/img1.png',
             price: 30.1,
@@ -76,12 +75,27 @@ const initialState = {
                 Диаметр 40 см
                 Вес 1110±100 г`
         },
-    ]
-}
+]
+
+
 
 export const pizzaReducer = (state = initialState, action) => {
     switch(action.type) {
+        case 'ADD_CHEESE': {
+            const index = action.payload;
+            const newState = [...state];
+            newState[index] = {...state[index], addCheese: !newState[index].addCheese};
+            return newState;
+        }
+
+        case "SELECTION_SIZE": {
+            const index = action.payload;
+            const newState = [...state];
+            newState[index] = {...state[index], size: !newState[index].size};
+            return newState;
+        }
+
         default:
-            return state
+            return state;
     }
 }
