@@ -5,34 +5,34 @@ const initialState = [
             addCheese: false,
             sum: 1,
             imgUrl: './img/combo/img1.png',
-            price: 11.9,
+            price: 29.9,
             infoHover: `Вес 1400±50 грамм`
         },
         {
-            name: 'Комбо S',
+            name: 'Комбо M',
             composition: 'Пицца (30 см) на выбор, наггетсы куриные большая порция (12-15 штук, 240-255 грамм), крылышки куриные большая порция (5-6 штук, 240-255 грамм).',
             addCheese: false,
             sum: 1,
             imgUrl: './img/combo/img1.png',
-            price: 11.9,
+            price: 30.9,
             infoHover: `Вес 1400±50 грамм`
         },
         {
-            name: 'Комбо S',
+            name: 'Комбо L',
             composition: 'Пицца (30 см) на выбор, наггетсы куриные большая порция (12-15 штук, 240-255 грамм), крылышки куриные большая порция (5-6 штук, 240-255 грамм).',
             addCheese: false,
             sum: 1,
             imgUrl: './img/combo/img1.png',
-            price: 11.9,
+            price: 31.9,
             infoHover: `Вес 1400±50 грамм`
         },
         {
-            name: 'Комбо S',
+            name: 'Комбо XL',
             composition: 'Пицца (30 см) на выбор, наггетсы куриные большая порция (12-15 штук, 240-255 грамм), крылышки куриные большая порция (5-6 штук, 240-255 грамм).',
             addCheese: false,
             sum: 1,
             imgUrl: './img/combo/img1.png',
-            price: 11.9,
+            price: 32.9,
             infoHover: `Вес 1400±50 грамм`
         },
 ]

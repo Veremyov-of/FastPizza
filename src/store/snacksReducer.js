@@ -3,33 +3,33 @@ const initialState =[
             name: "Куриные наггетсы",
             composition: "Стандартная порция (8-10 шт, 160-170 гр) Большая порция (12-15 шт, 240-255 гр)",
             size: false,
-            price: 7.2,
-            bigPrice: 15,
+            price: 6.2,
+            bigPrice: 9.9,
             imgUrl: './img/snacks/img1.png'
         },
         {
-            name: "Куриные наггетсы",
+            name: "Куриные крылышки",
             composition: "Стандартная порция (8-10 шт, 160-170 гр) Большая порция (12-15 шт, 240-255 гр)",
             size: false,
-            price: 8.2,
-            bigPrice: 15,
-            imgUrl: './img/snacks/img1.png'
+            price: 7.9,
+            bigPrice: 10.9,
+            imgUrl: './img/snacks/img2.png'
         },
         {
-            name: "Куриные наггетсы",
+            name: "Картофельные оладьи",
             composition: "Стандартная порция (8-10 шт, 160-170 гр) Большая порция (12-15 шт, 240-255 гр)",
             size: false,
-            price: 9.2,
-            bigPrice: 15,
-            imgUrl: './img/snacks/img1.png'
+            price: 4.9,
+            bigPrice: 7.9,
+            imgUrl: './img/snacks/img3.png'
         },
         {
-            name: "Куриные наггетсы",
+            name: "Картофель фри",
             composition: "Стандартная порция (8-10 шт, 160-170 гр) Большая порция (12-15 шт, 240-255 гр)",
             size: false,
-            price: 11.2,
-            bigPrice: 15,
-            imgUrl: './img/snacks/img1.png'
+            price: 3.9,
+            bigPrice: 4.9,
+            imgUrl: './img/snacks/img4.png'
         },
     ]
 

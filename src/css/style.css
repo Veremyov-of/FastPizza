@@ -67,6 +67,22 @@ a {
   text-decoration: none;
 }
 
+.colorTheme {
+  color: #e4e4e4;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #dadada;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FF9900;
+}
+
 .overheader {
   margin-bottom: 20px;
   -ms-flex-wrap: wrap;
@@ -351,7 +367,7 @@ a {
 }
 
 .container_pizza .inner_pizza .pizza {
-  margin: 10px 5px;
+  margin: 20px 5px;
   position: relative;
   width: 300px;
   height: 610px;
