@@ -169,6 +169,7 @@ a {
 }
 
 .navbar {
+  padding: 0 10px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }

@@ -5,7 +5,7 @@ export default function Combo() {
     const dispatch = useDispatch()
     const combo = useSelector(state => state.combo);
     const addBasket = (item) => {
-        dispatch({type: 'ADD_BASKET', payload: item});
+        dispatch({type: 'ADD_COMBO', payload: item});
         dispatch({type: 'ADD_BASKET_SUM', payload: item.price})
     }
     const addCheese = (item) => {

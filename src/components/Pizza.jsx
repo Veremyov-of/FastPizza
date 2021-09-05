@@ -4,7 +4,7 @@ export default function Home() {
     const dispatch = useDispatch()
     const pizza = useSelector(state => state.pizza);
     const addBasket = (item) => {
-        dispatch({type: 'ADD_BASKET', payload: item});
+        dispatch({type: 'ADD_PIZZA', payload: item});
         dispatch({type: 'ADD_BASKET_SUM', payload: item.price})
     }
     const selectionSize = (item) => {
