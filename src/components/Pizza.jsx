@@ -4,7 +4,8 @@ export default function Home() {
     const dispatch = useDispatch()
     const pizza = useSelector(state => state.pizza);
     const addBasket = (item) => {
-        dispatch({type: 'ADD_PIZZA', payload: item});
+        const newItem = {...item};
+        dispatch({type: 'ADD_PIZZA', payload: newItem});
         dispatch({type: 'ADD_BASKET_SUM', payload: item.price})
     }
     const selectionSize = (item) => {
@@ -54,9 +55,9 @@ export default function Home() {
                     <div className="pizza_choice">
                         <div className="pizza_choice_title">Выберите бесплатный соус</div>
                         <select value={item.sauce} onChange={(e) => choiceOfSauce(item, e)} className="pizza_choice_select">
-                            <option value="barbecue">Барбекю</option>
-                            <option value="cheese">Сырный</option>
-                            <option value="ketchup">Кетчуп</option>
+                            <option value="Барбекю">Барбекю</option>
+                            <option value="Сырный">Сырный</option>
+                            <option value="Кетчуп">Кетчуп</option>
                         </select>
                     </div>
                     <div className="pizza_price">

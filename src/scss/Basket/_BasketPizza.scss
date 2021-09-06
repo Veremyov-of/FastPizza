@@ -1,0 +1,55 @@
+.basketPizza {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &_item {
+        padding: 5px;
+        border: 2px solid #cdcdcd;
+        border-radius: 10px;
+        margin: 10px 0px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        &_wrapp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &_img {
+                width: 100px;
+                height: 100px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &_name {
+                font-size: 20px;
+                font-weight: 500;
+            }
+            &_size {
+                font-size: 20px;
+                font-weight: 400;
+            }
+            &_sauce {
+                font-size: 20px;
+                font-weight: 400;
+            }
+            &_number {
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+        &_funBlock {
+            margin-left: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &_price {
+                font-size: 20px;
+                font-weight: 500;
+
+            }
+        }
+    }
+    }

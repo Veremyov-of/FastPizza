@@ -1619,6 +1619,12 @@ a[title]:hover:after {
   font-weight: 400;
 }
 
+.basket_wrapp_item_inner_sauce {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
 .basket_wrapp_item_funBlock {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1667,5 +1673,95 @@ a[title]:hover:after {
   font-size: 19px;
   border-radius: 7px;
   border: none;
+}
+
+.basketPizza {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.basketPizza_item {
+  padding: 5px;
+  border: 2px solid #cdcdcd;
+  border-radius: 10px;
+  margin: 10px 0px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.basketPizza_item_wrapp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.basketPizza_item_wrapp_img {
+  width: 100px;
+  height: 100px;
+}
+
+.basketPizza_item_wrapp_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.basketPizza_item_wrapp_name {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.basketPizza_item_wrapp_size {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.basketPizza_item_wrapp_sauce {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.basketPizza_item_wrapp_number {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.basketPizza_item_funBlock {
+  margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.basketPizza_item_funBlock_price {
+  font-size: 20px;
+  font-weight: 500;
 }
 /*# sourceMappingURL=style.css.map */
