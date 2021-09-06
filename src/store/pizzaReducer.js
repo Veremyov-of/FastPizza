@@ -15,6 +15,13 @@ export const pizzaReducer = (state = initialState, action) => {
             return newState;
         }
 
+        case "CHOICE_OF_SAUCE": {
+            const index = action.payload;
+            const newState = [...state];
+            newState[index] = {...state[index], sauce: action.newSauce};
+            return newState;
+        }
+
         default:
             return state;
     }
@@ -24,6 +31,7 @@ export const pizzaReducer = (state = initialState, action) => {
 const initialState = [
     {
         name: 'Пицца Маргарита',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Томатный соус Состав: Сыр моцарелла, томаты.',
         size: false,
@@ -44,6 +52,7 @@ const initialState = [
     },
     {
         name: 'Пицца Ветчина и грибы',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Томатный соус Состав: Сыр моцарелла, ветчина, шампиньоны.',
         size: false,
@@ -64,6 +73,7 @@ const initialState = [
     },
     {
         name: 'Пицца Колбаски Карри',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Чесночный соус Состав: Сыр моцарелла, пепперони, баварские колбаски, соус карри.',
         size: false,
@@ -84,6 +94,7 @@ const initialState = [
     },
     {
         name: 'Пицца Ветчина и Пепперони',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Соус гриль. Состав: Сыр моцарелла, ветчина, пепперони.',
         size: false,
@@ -104,6 +115,7 @@ const initialState = [
     },
     {
         name: 'Пицца Баварская',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Томатный соус Состав: Сыр моцарелла, охотничьи колбаски, шампиньоны, томаты, лук.',
         size: false,
@@ -124,6 +136,7 @@ const initialState = [
     },
     {
         name: 'Пицца Сырный цыпленок',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Сырный соус Состав: Сыр моцарелла, цыпленок, томаты.',
         size: false,
@@ -144,6 +157,7 @@ const initialState = [
     },
     {
         name: 'Пицца Пепперони',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Томатный соус Состав: Сыр моцарелла, пепперони.',
         size: false,
@@ -164,6 +178,7 @@ const initialState = [
     },
     {
         name: 'Пицца 4 сезона',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Томатный соус Состав: Сыр моцарелла, сыр фета, ветчина, пепперони, шампиньоны, томаты.',
         size: false,
@@ -184,6 +199,7 @@ const initialState = [
     },
     {
         name: 'Пицца Деревенская',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Ранч соус Состав: Сыр моцарелла, ветчина, шампиньоны, маринованные огурцы, лук.',
         size: false,
@@ -204,6 +220,7 @@ const initialState = [
     },
     {
         name: 'Пицца Пепперони лайт',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Томатный соус Состав: Сыр моцарелла, пепперони, перец болгарский, соус сладкий чили.',
         size: false,
@@ -224,6 +241,7 @@ const initialState = [
     },
     {
         name: 'Пицца Итальянская',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Томатный соус Состав: Сыр моцарелла, пепперони, шампиньоны, маслины.',
         size: false,
@@ -244,6 +262,7 @@ const initialState = [
     },
     {
         name: 'Пицца Гавайская',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Томатный соус Состав: Сыр моцарелла, цыпленок, ветчина, ананас.',
         size: false,
@@ -264,6 +283,7 @@ const initialState = [
     },
     {
         name: 'Пицца Мясная',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Томатный соус Состав: Сыр моцарелла, цыпленок, ветчина, пепперони.',
         size: false,
@@ -284,6 +304,7 @@ const initialState = [
     },
     {
         name: 'Пицца Чесночный цыпленок',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Чесночный соус Состав: Сыр моцарелла, цыпленок, бекон, томаты.',
         size: false,
@@ -304,6 +325,7 @@ const initialState = [
     },
     {
         name: 'Пицца Цыпленок рэнч',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Ранч соус Состав: Сыр моцарелла, цыпленок, ветчина, томаты, соус ранч.',
         size: false,
@@ -324,6 +346,7 @@ const initialState = [
     },
     {
         name: 'Пицца Барбекю',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Томатный соус Состав: Сыр моцарелла, цыпленок, бекон, лук, соус барбекю.',
         size: false,
@@ -344,6 +367,7 @@ const initialState = [
     },
     {
         name: 'Пицца Вегетарианская',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Томатный соус Состав: Сыр моцарелла, сыр фета, шампиньоны, томаты, маслины, лук, болгарский перец.',
         size: false,
@@ -364,6 +388,7 @@ const initialState = [
     },
     {
         name: 'Пицца Мексиканская',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Чесночный соус Состав: Сыр моцарелла, цыпленок, шампиньоны, томаты, лук, перец болгарский, перец халапеньо.',
         size: false,
@@ -384,6 +409,7 @@ const initialState = [
     },
     {
         name: 'Пицца Грибной цыпленок',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Ранч соус Состав: Сыр моцарелла, сыр фета, цыпленок, ветчина, шампиньоны, соус горчичный.',
         size: false,
@@ -404,6 +430,7 @@ const initialState = [
     },
     {
         name: 'Пицца Прованс',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Ранч соус Состав: Сыр моцарелла, сыр дорблю, ветчина, пепперони, томаты.',
         size: false,
@@ -424,6 +451,7 @@ const initialState = [
     },
     {
         name: 'Пицца Филадельфия',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Томатный соус Состав: Сыр моцарелла, сыр фета, лосось, томаты, лимон (отдельно)',
         size: false,
@@ -444,6 +472,7 @@ const initialState = [
     },
     {
         name: 'Пицца Супер мясная',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Томатный соус Состав: Сыр моцарелла, цыпленок, ветчина, пепперони, бекон.',
         size: false,
@@ -464,6 +493,7 @@ const initialState = [
     },
     {
         name: 'Пицца Гриль',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Гриль соус Состав: Сыр моцарелла, ветчина, пепперони, бекон, шампиньоны, перец болгарский.',
         size: false,
@@ -484,6 +514,7 @@ const initialState = [
     },
     {
         name: 'Пицца Цыпленок дорблю',
+        sauce: 'barbecue',
         sum : 1,
         composition: 'Основа: Сырный соус Состав: Сыр моцарелла, сыр дорблю, цыпленок, томаты.',
         size: false,

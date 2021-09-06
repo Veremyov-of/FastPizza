@@ -16,6 +16,12 @@ export default function Home() {
         const indexItem = pizza.indexOf(item);
         dispatch({type: 'ADD_CHEESE_PIZZA', payload: indexItem});
     }
+    
+    const choiceOfSauce = (item,event) => {
+        const modifiedSauce = event.target.value;
+        const indexItem = pizza.indexOf(item);
+        dispatch({type: 'CHOICE_OF_SAUCE', payload: indexItem, newSauce: modifiedSauce});
+    }
 
 
     return (
@@ -47,9 +53,10 @@ export default function Home() {
                     </button>
                     <div className="pizza_choice">
                         <div className="pizza_choice_title">Выберите бесплатный соус</div>
-                        <select className="pizza_choice_select">
-                            <option>Барбекю</option>
-                            <option>Сырный</option>
+                        <select value={item.sauce} onChange={(e) => choiceOfSauce(item, e)} className="pizza_choice_select">
+                            <option value="barbecue">Барбекю</option>
+                            <option value="cheese">Сырный</option>
+                            <option value="ketchup">Кетчуп</option>
                         </select>
                     </div>
                     <div className="pizza_price">
