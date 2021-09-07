@@ -21,7 +21,7 @@ export default function Home() {
     const choiceOfSauce = (item,event) => {
         const modifiedSauce = event.target.value;
         const indexItem = pizza.indexOf(item);
-        dispatch({type: 'CHOICE_OF_SAUCE', payload: indexItem, newSauce: modifiedSauce});
+        dispatch({type: 'CHOICE_OF_SAUCE_PIZZA', payload: indexItem, newSauce: modifiedSauce});
     }
 
 
@@ -31,7 +31,7 @@ export default function Home() {
             <div className="inner_pizza">
                 {pizza.map((item, index) => (
                 <div key={index} className="pizza">
-                    <a className="pizza_info" data-title={item.infoHover}>инфо</a>
+                    <a href="/" className="pizza_info" data-title={item.infoHover}>инфо</a>
                     <div className="pizza_wrapp">
                         <img className="pizza_wrapp_img" src={item.imgUrl} alt="img-pizza"/>
                     </div>

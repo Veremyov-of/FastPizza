@@ -15,7 +15,7 @@ export const pizzaReducer = (state = initialState, action) => {
             return newState;
         }
 
-        case "CHOICE_OF_SAUCE": {
+        case "CHOICE_OF_SAUCE_PIZZA": {
             const index = action.payload;
             const newState = [...state];
             newState[index] = {...state[index], sauce: action.newSauce};

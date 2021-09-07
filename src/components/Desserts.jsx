@@ -4,7 +4,8 @@ export default function Snacks() {
     const dispatch = useDispatch();
     const desserts = useSelector(state => state.desserts);
     const addBasket = (item) => {
-        dispatch({type: 'ADD_BASKET', payload: item});
+        const newItem = {...item};
+        dispatch({type: 'ADD_DESSERTS', payload: newItem});
         dispatch({type: 'ADD_BASKET_SUM', payload: item.price})
     }
     return (

@@ -1,18 +1,29 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 //components
 import BasketPizza from "./BasketPizza";
+import BasketCombo from './BasketCombo';
+import BasketSnacks from "./BasketSnacks";
+import BasketDesserts from "./BasketDesserts";
+import BasketSauces from "./BasketSauces";
+import BasketBeverages from './BasketBeverages';
+import BasketJuices from './BasketJuices';
 
 export default function Basket() {
 
-    const dispatch = useDispatch();
     const basketSum = useSelector(state => state.basketSum.basketSum)
     return (
         <div className="basket">
             <h2 className="basket_title">Корзина</h2>
+            <BasketPizza />
+            <BasketCombo />
+            <BasketSnacks />
+            <BasketDesserts />
+            <BasketSauces />
+            <BasketBeverages />
+            <BasketJuices />
             <div className="basket_wrapp">
-                <BasketPizza />
                 <div className="sum">Общая сумма:<span> {basketSum}руб</span></div>
             </div>
             <div className="basket_group">

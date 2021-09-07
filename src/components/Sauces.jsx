@@ -4,7 +4,8 @@ export default function Sauces() {
     const dispatch = useDispatch();
     const sauces = useSelector(state => state.sauces);
     const addBasket = (item) => {
-        dispatch({type: 'ADD_BASKET', payload: item});
+        const newItem = {...item};
+        dispatch({type: 'ADD_SAUCES', payload: newItem});
         dispatch({type: 'ADD_BASKET_SUM', payload: item.price})
     }
     return (

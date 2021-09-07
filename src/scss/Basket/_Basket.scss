@@ -11,57 +11,15 @@
         font-weight: 400;
     }
     &_wrapp {
+        margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        .sum {
-            font-size: 20px;
-        }
-        &_item {
-            margin: 10px 0px;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            &_inner {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                &_img {
-                    width: 100px;
-                    height: 100px;
-                    img {
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-                &_name {
-                    margin-left: 20px;
-                    font-size: 20px;
-                    font-weight: 500;
-                }
-                &_size {
-                    margin-left: 20px;
-                    font-size: 20px;
-                    font-weight: 400;
-                }
-                &_sauce {
-                    margin-left: 20px;
-                    font-size: 20px;
-                    font-weight: 400;
-                }
-            }
-            &_funBlock {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                &_price {
-                    font-size: 20px;
-                    font-weight: 500;
-
-                }
-            }
-        }
+    }
+    .sum {
+        font-size: 20px;
+        font-weight: 500;
     }
 
     &_group {

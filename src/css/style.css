@@ -1555,6 +1555,7 @@ a[title]:hover:after {
 }
 
 .basket_wrapp {
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1570,74 +1571,7 @@ a[title]:hover:after {
           flex-direction: column;
 }
 
-.basket_wrapp .sum {
-  font-size: 20px;
-}
-
-.basket_wrapp_item {
-  margin: 10px 0px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.basket_wrapp_item_inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.basket_wrapp_item_inner_img {
-  width: 100px;
-  height: 100px;
-}
-
-.basket_wrapp_item_inner_img img {
-  width: 100%;
-  height: 100%;
-}
-
-.basket_wrapp_item_inner_name {
-  margin-left: 20px;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.basket_wrapp_item_inner_size {
-  margin-left: 20px;
-  font-size: 20px;
-  font-weight: 400;
-}
-
-.basket_wrapp_item_inner_sauce {
-  margin-left: 20px;
-  font-size: 20px;
-  font-weight: 400;
-}
-
-.basket_wrapp_item_funBlock {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.basket_wrapp_item_funBlock_price {
+.basket .sum {
   font-size: 20px;
   font-weight: 500;
 }
@@ -1676,6 +1610,8 @@ a[title]:hover:after {
 }
 
 .basketPizza {
+  margin: 0 auto;
+  max-width: 700px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1692,7 +1628,7 @@ a[title]:hover:after {
 }
 
 .basketPizza_item {
-  padding: 5px;
+  padding: 5px 10px;
   border: 2px solid #cdcdcd;
   border-radius: 10px;
   margin: 10px 0px;
@@ -1706,44 +1642,51 @@ a[title]:hover:after {
 }
 
 .basketPizza_item_wrapp {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .basketPizza_item_wrapp_img {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
 }
 
 .basketPizza_item_wrapp_img img {
-  width: 100%;
-  height: 100%;
+  width: 90px;
+  height: 90px;
 }
 
 .basketPizza_item_wrapp_name {
-  font-size: 20px;
+  max-width: 250px;
+  margin-left: 10px;
+  font-size: 18px;
   font-weight: 500;
 }
 
 .basketPizza_item_wrapp_size {
-  font-size: 20px;
+  max-width: 50px;
+  margin-left: 10px;
+  font-size: 18px;
   font-weight: 400;
 }
 
 .basketPizza_item_wrapp_sauce {
-  font-size: 20px;
+  max-width: 100px;
+  margin-left: 10px;
+  font-size: 18px;
   font-weight: 400;
 }
 
 .basketPizza_item_wrapp_number {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
 }
 

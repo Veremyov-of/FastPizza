@@ -4,7 +4,8 @@ export default function Juices() {
     const dispatch = useDispatch();
     const juices = useSelector(state => state.juices);
     const addBasket = (item) => {
-        dispatch({type: 'ADD_BASKET', payload: item});
+        const newItem = {...item}
+        dispatch({type: 'ADD_JUICES', payload: newItem});
         dispatch({type: 'ADD_BASKET_SUM', payload: item.price})
     }
     return (

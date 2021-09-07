@@ -5,12 +5,29 @@ export default function Combo() {
     const dispatch = useDispatch()
     const combo = useSelector(state => state.combo);
     const addBasket = (item) => {
-        dispatch({type: 'ADD_COMBO', payload: item});
+        const newItem = {...item};
+        dispatch({type: 'ADD_COMBO', payload: newItem});
         dispatch({type: 'ADD_BASKET_SUM', payload: item.price})
     }
     const addCheese = (item) => {
         const indexItem = combo.indexOf(item);
         dispatch({type: 'ADD_CHEESE_COMBO', payload: indexItem});
+    }
+
+    const choiceOfSauceFirst = (item,event) => {
+        const modifiedSauce = event.target.value;
+        const indexItem = combo.indexOf(item);
+        dispatch({type: 'CHOICE_OF_SAUCE_COMBO_FIRST', payload: indexItem, newSauce: modifiedSauce});
+    }
+    const choiceOfSauceSecond = (item, event) => {
+        const modifiedSauce = event.target.value;
+        const indexItem = combo.indexOf(item);
+        dispatch({type: 'CHOICE_OF_SAUCE_COMBO_SECOND', payload: indexItem, newSauce: modifiedSauce});
+    }
+    const choiceOfPizza = (item, event) => {
+        const modifiedSauce = event.target.value;
+        const indexItem = combo.indexOf(item);
+        dispatch({type: 'CHOICE_OF_PIZZA', payload: indexItem, newSauce: modifiedSauce});
     }
     return (
         <div id="combo" className="container_combo section">
@@ -18,7 +35,7 @@ export default function Combo() {
             <div className="inner_combo">
                 {combo.map((item, index) => (
                 <div key={index} className="combo">
-                    <a className="combo_info" data-title={item.infoHover}>инфо</a>
+                    <a href="/" className="combo_info" data-title={item.infoHover}>инфо</a>
                     <div className="combo_wrapp">
                         <img className="combo_wrapp_img" src={item.imgUrl} alt="img-pizza"/>
                     </div>
@@ -30,9 +47,9 @@ export default function Combo() {
                     </div>
                     <div className="combo_choice">
                         <h3 className="combo_choice_title">Выберите пиццу</h3>
-                        <select className="combo_choice_select">
-                            <option>Ветчина и грибы</option>
-                            <option>Ветчина и грибы</option>
+                        <select value={item.pizzaCombo} onChange={(e) => choiceOfPizza(item, e)} className="combo_choice_select">
+                            <option value="Ветчина и грибы">Ветчина и грибы</option>
+                            <option value="Пицца Маргарита">Пицца Маргарита</option>
                         </select>
                     </div>
                     <button onClick={() => addCheese(item)} className={`combo_addCheese ${item.addCheese ? 'active_addCheese': ''}`}>
@@ -44,13 +61,15 @@ export default function Combo() {
                     </button>
                     <div className="combo_choice">
                         <div className="combo_choice_title">Выберите два соуса</div>
-                        <select className="combo_choice_select select_two">
-                            <option>Барбекю</option>
-                            <option>Сырный</option>
+                        <select value={item.sauceFirst} onChange={(e) => choiceOfSauceFirst(item, e)} className="combo_choice_select select_two">
+                            <option value="Барбекю">Барбекю</option>
+                            <option value="Сырный">Сырный</option>
+                            <option value="Кетчуп">Кетчуп</option>
                         </select>
-                        <select className="combo_choice_select">
-                            <option>Барбекю</option>
-                            <option>Сырный</option>
+                        <select value={item.sauceSecond} onChange={(e) => choiceOfSauceSecond(item, e)} className="combo_choice_select">
+                            <option value="Барбекю">Барбекю</option>
+                            <option value="Сырный">Сырный</option>
+                            <option value="Кетчуп">Кетчуп</option>
                         </select>
                     </div>
                     

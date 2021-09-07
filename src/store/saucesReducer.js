@@ -1,16 +1,19 @@
 const initialState = [
         {
             name: 'Томатный кетчуп',
+            sum: 1,
+            imgUrl: './img/sauces/img1.png',
+            price: 0.6,
+        },
+        {
+            name: 'Сырный соус',
+            sum: 1,
             imgUrl: './img/sauces/img1.png',
             price: 0.6,
         },
         {
             name: 'Томатный кетчуп',
-            imgUrl: './img/sauces/img1.png',
-            price: 0.6,
-        },
-        {
-            name: 'Томатный кетчуп',
+            sum: 1,
             imgUrl: './img/sauces/img1.png',
             price: 0.6,
         },

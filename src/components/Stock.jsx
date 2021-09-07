@@ -1,8 +1,7 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 export default function Stock() {
-    const dispatch = useDispatch();
     const stock = useSelector(state => state.stock.stock);
     return (
         <div>
