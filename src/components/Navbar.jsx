@@ -1,19 +1,26 @@
 import { useSelector } from "react-redux";
+import { useState } from "react";
 
 import { Link } from "react-router-dom";
 export default function Navbar() {
+    const [menu, setMenu] = useState(false);
     const basketSum = useSelector(state => state.basketSum.basketSum);
-    const goodsSum = useSelector(state => state.basketSum.basketGoods)
+    const goodsSum = useSelector(state => state.basketSum.basketGoods);
+
+    const menuToggle = () => {
+        const newState = !menu;
+        setMenu(newState);
+    }
     return (
         <div className="navbar_wrapp">
             <div className="navbar container">
-            <div className="navbar_nav">
-                <a href="/#pizza" className="navbar_nav_link">Пиццы</a>
-                <a href="/#combo" className="navbar_nav_link">Комбо</a>
-                <a href="/#snacks" className="navbar_nav_link">Закуски</a>
-                <a href="/#beverages" className="navbar_nav_link">Напитки</a>
-                <Link to="/stock" className="navbar_nav_link">Акции</Link>
-                <a href="/" className="navbar_nav_link">Доставка</a>
+            <div className={`navbar_nav ${ menu ? 'navbar_nav_active' : ''}`}>
+                <a onClick={menuToggle} href="/#pizza" className="navbar_nav_link">Пиццы</a>
+                <a onClick={menuToggle} href="/#combo" className="navbar_nav_link">Комбо</a>
+                <a onClick={menuToggle} href="/#snacks" className="navbar_nav_link">Закуски</a>
+                <a onClick={menuToggle} href="/#beverages" className="navbar_nav_link">Напитки</a>
+                <Link onClick={menuToggle} to="/stock" className="navbar_nav_link">Акции</Link>
+                <a onClick={menuToggle} href="/" className="navbar_nav_link">Доставка</a>
             </div>
             <div className="navbar_container">
                 <button className="navbar_container_support">Служба поддержки</button>
@@ -25,6 +32,11 @@ export default function Navbar() {
                     <Link to="/basket" className="navbar_container_inner_basket"><img src="./img/basket.png" alt="basket"/></Link>
                 </div>
             </div>
+            <button onClick={menuToggle} className="menu">
+                <span className={`menu_line ${menu ? 'line_active': ''}`}></span>
+                <span className={`menu_line ${menu ? 'line_active': ''}`}></span>
+                <span className={`menu_line ${menu ? 'line_active': ''}`}></span>
+            </button>
         </div>
         </div>
     );

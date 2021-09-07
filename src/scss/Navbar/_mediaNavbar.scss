@@ -1,0 +1,85 @@
+@media only screen and (max-width: 1000px) {
+    .navbar {
+        &_nav {
+            font-size: 15px;
+            width: 400px;
+        }
+    }
+}
+
+@media only screen and (max-width: 785px) {
+    .navbar {
+        &_nav {
+            position: relative;
+            display: none;
+            padding-top: 80px;
+            font-size: 30px;
+            justify-content: normal;
+            top: 0;
+            left: 0;
+            position: absolute;
+            z-index: 100;
+            background-color: #fff;
+            width: 100%;
+            height: 100vh;
+            flex-direction: column;
+            &_link {
+                margin-bottom: 20px;
+            }
+        }
+        &_nav_active {
+            display: flex;
+        }
+        .menu {
+            display: block;
+            .line_active {
+                &:nth-child(1) {
+                    position: absolute;
+                    margin: 0px;
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2) {
+                    margin: 0px;
+                    display: none;
+                }
+                &:nth-child(3) {
+                    position: absolute;
+                    margin: 0px;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 785px) {
+    .navbar {
+        &_container {
+            &_support {
+                font-size: 13px;
+                width: 100px;
+                height: 35px;
+                margin-right: 10px;
+            }
+            &_inner {
+                &_shopCard {
+                    margin-right: 10px;
+                    &_price {
+                        font-size: 14px;
+                    }
+                    &_product {
+                        font-size: 14px;
+                    }
+                }
+                &_basket {
+                    width: 60px;
+                    height: 35px;
+                    img {
+                        width: 26px;
+                        height: 26px;
+                    }
+                }
+            }
+        }
+    }
+}

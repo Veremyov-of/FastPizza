@@ -202,6 +202,27 @@ a {
   transition: .4s background-color;
 }
 
+.navbar .menu {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  z-index: 101;
+  display: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  width: 40px;
+  height: 45px;
+}
+
+.navbar .menu_line {
+  display: block;
+  margin: 7px 0px;
+  height: 4px;
+  width: 100%;
+  background-color: #313131;
+}
+
 .navbar_container {
   height: 60px;
 }
@@ -1750,7 +1771,7 @@ a[title]:hover:after {
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 415px) {
   .overheader_logo {
     width: 70px;
     height: 70px;
@@ -1787,6 +1808,89 @@ a[title]:hover:after {
   }
   .overheader_work_time {
     font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .navbar_nav {
+    font-size: 15px;
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 785px) {
+  .navbar_nav {
+    position: relative;
+    display: none;
+    padding-top: 80px;
+    font-size: 30px;
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 100;
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar_nav_link {
+    margin-bottom: 20px;
+  }
+  .navbar_nav_active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar .menu {
+    display: block;
+  }
+  .navbar .menu .line_active:nth-child(1) {
+    position: absolute;
+    margin: 0px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .navbar .menu .line_active:nth-child(2) {
+    margin: 0px;
+    display: none;
+  }
+  .navbar .menu .line_active:nth-child(3) {
+    position: absolute;
+    margin: 0px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+}
+
+@media only screen and (max-width: 785px) {
+  .navbar_container_support {
+    font-size: 13px;
+    width: 100px;
+    height: 35px;
+    margin-right: 10px;
+  }
+  .navbar_container_inner_shopCard {
+    margin-right: 10px;
+  }
+  .navbar_container_inner_shopCard_price {
+    font-size: 14px;
+  }
+  .navbar_container_inner_shopCard_product {
+    font-size: 14px;
+  }
+  .navbar_container_inner_basket {
+    width: 60px;
+    height: 35px;
+  }
+  .navbar_container_inner_basket img {
+    width: 26px;
+    height: 26px;
   }
 }
 /*# sourceMappingURL=style.css.map */
