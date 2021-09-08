@@ -83,6 +83,11 @@ a {
   background-color: #FF9900;
 }
 
+button:focus {
+  border: none;
+  outline: none;
+}
+
 .overheader {
   margin-bottom: 20px;
   -ms-flex-wrap: wrap;

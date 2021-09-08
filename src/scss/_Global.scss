@@ -43,3 +43,9 @@ a {
 ::-webkit-scrollbar-thumb {
     background-color: #FF9900;
 }
+
+button:focus {
+    border: none;
+    outline: none;
+}
+
