@@ -12,7 +12,7 @@ export default function Overheader() {
                 <div className="overheader_stock_text">или пицца бесплатно</div>
             </div>
             <div className="overheader_phone">
-                <Link className="overheader_phone_number">9313</Link>
+                <a href="/" className="overheader_phone_number">9313</a>
                 <div className="overheader_phone_inner">
                     <img className="overheader_phone_inner_img" src="./img/logoA.png" alt="logo_phone"/>
                     <img className="overheader_phone_inner_img" src="./img/logoM.png" alt="logo_phone"/>

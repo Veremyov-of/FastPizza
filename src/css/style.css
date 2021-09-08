@@ -482,6 +482,8 @@ button:focus {
 }
 
 .container_pizza .inner_pizza .pizza_size .active_size {
+  -webkit-transition: all .2s;
+  transition: all .2s;
   border: 1px solid #000;
   background-color: #fff;
 }
@@ -851,6 +853,8 @@ button:focus {
 }
 
 .container_snacks .snacks_inner .snacks_size .active_snacks {
+  -webkit-transition: all .2s;
+  transition: all .2s;
   background-color: #fff;
   border: 1px solid #000;
 }
@@ -1124,6 +1128,7 @@ button:focus {
 }
 
 .container_beverages .beverages_inner .beverages_size {
+  cursor: pointer;
   margin: 0 auto;
   border-radius: 5px;
   width: 270px;
@@ -1138,6 +1143,8 @@ button:focus {
 }
 
 .container_beverages .beverages_inner .beverages_size .active_snacks {
+  -webkit-transition: all .2s;
+  transition: all .2s;
   background-color: #fff;
   border: 1px solid #000;
 }
@@ -1572,12 +1579,21 @@ a[title]:hover:after {
 }
 
 .basket {
+  padding: 0 10px;
   margin: 0 auto;
-  margin-top: 40px;
   max-width: 900px;
 }
 
 .basket_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   height: 90px;
   width: 100%;
@@ -1604,6 +1620,7 @@ a[title]:hover:after {
 }
 
 .basket .sum {
+  margin-top: 15px;
   font-size: 20px;
   font-weight: 500;
 }
@@ -1614,9 +1631,11 @@ a[title]:hover:after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1628,9 +1647,19 @@ a[title]:hover:after {
   border-radius: 7px;
   font-size: 18px;
   border: 1px solid #878686;
+  margin-bottom: 10px;
+}
+
+.basket_group_link:hover {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  background-color: #FF9900;
+  border-color: #FF9900;
+  color: #fff;
 }
 
 .basket_group_btn {
+  margin-bottom: 10px;
   cursor: pointer;
   width: 170px;
   height: 50px;
@@ -1639,9 +1668,25 @@ a[title]:hover:after {
   font-size: 19px;
   border-radius: 7px;
   border: none;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.basket_group_btn:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
 }
 
 .basketPizza {
+  padding: 0 5px;
   margin: 0 auto;
   max-width: 700px;
   display: -webkit-box;
@@ -1692,8 +1737,8 @@ a[title]:hover:after {
 }
 
 .basketPizza_item_wrapp_img img {
-  width: 90px;
-  height: 90px;
+  width: 100%;
+  height: 100%;
 }
 
 .basketPizza_item_wrapp_name {
@@ -1831,16 +1876,17 @@ a[title]:hover:after {
 
 @media only screen and (max-width: 785px) {
   .navbar_nav {
-    position: relative;
-    display: none;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     padding-top: 80px;
     font-size: 30px;
     -webkit-box-pack: normal;
         -ms-flex-pack: normal;
             justify-content: normal;
-    top: 0;
+    top: -1200px;
     left: 0;
-    position: absolute;
     z-index: 100;
     background-color: #fff;
     width: 100%;
@@ -1849,6 +1895,8 @@ a[title]:hover:after {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-transition: top .5s;
+    transition: top .5s;
   }
   .navbar_nav_link {
     margin-bottom: 20px;
@@ -1857,6 +1905,10 @@ a[title]:hover:after {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    top: 0;
+    left: 0;
+    -webkit-transition: top .5s;
+    transition: top .5s;
   }
   .navbar .menu {
     display: block;
@@ -1903,5 +1955,90 @@ a[title]:hover:after {
     width: 26px;
     height: 26px;
   }
+}
+
+@media only screen and (max-width: 700px) {
+  .basketPizza_item {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .basketPizza_item_wrapp_img {
+    width: 70px;
+    height: 70px;
+  }
+  .basketPizza_item_wrapp_img img {
+    width: 70px;
+    height: 70px;
+  }
+  .basketPizza_item_wrapp_name {
+    max-width: 140px;
+    font-size: 16px;
+  }
+  .basketPizza_item_wrapp_size {
+    font-size: 16px;
+  }
+  .basketPizza_item_wrapp_sauce {
+    font-size: 16px;
+  }
+  .basketPizza_item_wrapp_number {
+    text-align: center;
+    font-size: 16px;
+  }
+  .basketPizza_item_funBlock_price {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .basketPizza_item {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .basketPizza_item_wrapp {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .basketPizza_item_wrapp_img {
+    width: 70px;
+    height: 70px;
+  }
+  .basketPizza_item_wrapp_img img {
+    width: 70px;
+    height: 70px;
+  }
+  .basketPizza_item_wrapp_name {
+    max-width: 140px;
+    font-size: 16px;
+  }
+  .basketPizza_item_wrapp_size {
+    font-size: 16px;
+  }
+  .basketPizza_item_wrapp_sauce {
+    font-size: 16px;
+  }
+  .basketPizza_item_wrapp_number {
+    text-align: center;
+    font-size: 16px;
+  }
+  .basketPizza_item_funBlock_price {
+    font-size: 17px;
+  }
+  .basket {
+    margin: 0;
+  }
+  .basket_title {
+    height: 60px;
+    font-size: 40px;
+  }
+}
+
+.about_title {
+  font-size: 30px;
+}
+
+.about_wrapp_text {
+  font-size: 15px;
 }
 /*# sourceMappingURL=style.css.map */

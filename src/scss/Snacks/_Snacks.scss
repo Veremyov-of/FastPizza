@@ -61,6 +61,7 @@
                     @extend %flex-2c;
                 }
                 .active_snacks {
+                    transition: all .2s;
                     background-color: #fff;
                     border: 1px solid #000;
                 }

@@ -1,0 +1,81 @@
+@media only screen and (max-width: 700px) {
+    .basketPizza {
+        &_item {
+            justify-content: space-between;
+            &_wrapp {
+                &_img {
+                    width: 70px;
+                    height: 70px;
+                    img {
+                        width: 70px;
+                        height: 70px;
+                    }
+                }
+                &_name {
+                    max-width: 140px;
+                    font-size: 16px;
+                }
+                &_size {
+                    font-size: 16px;
+                }
+                &_sauce {
+                    font-size: 16px;
+                }
+                &_number {
+                    text-align: center;
+                    font-size: 16px;
+                }
+            }
+            &_funBlock {
+                &_price {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .basketPizza {
+        &_item {
+            justify-content: space-between;
+            &_wrapp {
+                flex-wrap: wrap;
+                &_img {
+                    width: 70px;
+                    height: 70px;
+                    img {
+                        width: 70px;
+                        height: 70px;
+                    }
+                }
+                &_name {
+                    max-width: 140px;
+                    font-size: 16px;
+                }
+                &_size {
+                    font-size: 16px;
+                }
+                &_sauce {
+                    font-size: 16px;
+                }
+                &_number {
+                    text-align: center;
+                    font-size: 16px;
+                }
+            }
+            &_funBlock {
+                &_price {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+    .basket {
+        margin: 0;
+        &_title {
+            height: 60px;
+            font-size: 40px;
+        }
+    }
+}

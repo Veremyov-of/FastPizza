@@ -87,6 +87,7 @@
                     font-weight: 400;
                 }
                 .active_size {
+                    transition: all .2s;
                     border: 1px solid #000;
                     background-color: #fff;
                 }

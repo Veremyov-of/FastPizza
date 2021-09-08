@@ -36,6 +36,7 @@
                 color: #000;
             }
             &_size {
+                cursor: pointer;
                 @extend %flex-c-s;
                 margin: 0 auto;
                 border-radius: 5px;
@@ -49,6 +50,7 @@
                     @extend %flex-2c;
                 }
                 .active_snacks {
+                    transition: all .2s;
                     background-color: #fff;
                     border: 1px solid #000;
                 }
