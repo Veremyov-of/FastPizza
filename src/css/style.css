@@ -1511,7 +1511,13 @@ a {
 }
 
 .payment {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 30px 10px;
+}
+
+.payment img {
+  margin: 10px 10px;
 }
 
 .footer {

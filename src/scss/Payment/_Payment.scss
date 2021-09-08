@@ -1,4 +1,8 @@
 .payment {
     @extend %flex-c-s;
+    flex-wrap: wrap;
     padding: 30px 10px;
+    img {
+        margin: 10px 10px;
+    }
 }
