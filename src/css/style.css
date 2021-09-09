@@ -1827,6 +1827,28 @@ a[title]:hover:after {
   color: #313131;
 }
 
+.contractOffer {
+  margin: 0 auto;
+  max-width: 800px;
+  color: #313131;
+}
+
+.contractOffer_title {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.contractOffer_minTitle {
+  font-size: 18px;
+}
+
+.contractOffer_text {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
 @media only screen and (max-width: 700px) {
   .overheader {
     padding: 0 10px;
