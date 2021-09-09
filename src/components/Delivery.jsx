@@ -7,9 +7,9 @@ export default function Delivery() {
         height: '350px'
     }
     return (
-        <div id="deliveryid">
+        <div>
             <div className="delivery container">
-                <h2 className="delivery_title">Условия доставки пиццы</h2>
+                <h2 id="deliveryid" className="delivery_title">Условия доставки пиццы</h2>
                 <p className="delivery_text">
                 Время работы доставки с 10:00 – до 02:00 (прием заказов осуществляется с 10:00 – до 01:55,
                 окно самовывоза работает с 10:00 – до 23:00, прием заказов на самовывоз осуществляется до 22:45).

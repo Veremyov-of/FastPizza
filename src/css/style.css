@@ -1794,7 +1794,7 @@ a[title]:hover:after {
   text-align: center;
   color: #313131;
   font-size: 35px;
-  margin: 35px 0px;
+  padding: 35px 0px;
 }
 
 .delivery_text {
