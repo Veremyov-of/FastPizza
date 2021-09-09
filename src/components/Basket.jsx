@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 //components
@@ -9,13 +9,20 @@ import BasketDesserts from "./BasketDesserts";
 import BasketSauces from "./BasketSauces";
 import BasketBeverages from './BasketBeverages';
 import BasketJuices from './BasketJuices';
+import PopUp from './_PopUp';
 
 
 export default function Basket() {
-
-    const basketSum = useSelector(state => state.basketSum.basketSum)
+    const popup = useSelector(state => state.popup.popup);
+    const dispatch = useDispatch();
+    const basketSum = useSelector(state => state.basketSum.basketSum);
+    const togglePopup = () => {
+        dispatch({type: "POP_UP"})
+    }
     return (
        <div id="basketName">
+           {popup && <PopUp />} 
+           
             <div className="basket">
                 <h2 className="basket_title">Корзина</h2>
                 <BasketPizza />
@@ -30,9 +37,10 @@ export default function Basket() {
                 </div>
                 <div className="basket_group">
                     <Link className="basket_group_link" to="/">Вернуться в меню</Link>
-                    <button className="basket_group_btn">Оформить заказ</button>
+                    <button onClick={togglePopup} className="basket_group_btn">Оформить заказ</button>
                 </div>
             </div>
+            
        </div>
     );
 }

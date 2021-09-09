@@ -16,7 +16,7 @@ export default function BasketPizza() {
                     </div>
                     <div className="basketPizza_item_funBlock">
                         <div className="basketPizza_item_funBlock_price">{item.price} руб</div>
-                        <button className="basketPizza_item_funBlock_close"></button>
+                        <button className="basketPizza_item_funBlock_close">Delete</button>
                     </div>
                 </div>
             ))}

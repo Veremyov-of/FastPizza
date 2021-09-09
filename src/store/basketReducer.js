@@ -88,6 +88,18 @@ export const basketReducer = (state = initialState, action) => {
             state.basketJuices.push(action.payload);
             return state;
 
+        case "SEND_ALL": 
+        
+        return {...state, 
+            basketPizza: [],
+            basketCombo: [],
+            basketSnacks: [],
+            basketDesserts: [],
+            basketSauces: [],
+            basketBeverages: [],
+            basketJuices: []
+        }
+
         default:
             return state
     }

@@ -20,6 +20,8 @@ import { basketSumReducer } from "./basketSumReducer";
 
 import { aboutReducer} from './aboutReducer';
 
+import { popupReducer } from "./popupReducer";
+
 const rootReducer = combineReducers({
     stock: stockReducer,
     pizza: pizzaReducer,
@@ -32,6 +34,7 @@ const rootReducer = combineReducers({
     about: aboutReducer,
     basket: basketReducer,
     basketSum: basketSumReducer,
+    popup: popupReducer
     
 })
 export const store = createStore(rootReducer, applyMiddleware(logger));

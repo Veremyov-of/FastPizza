@@ -15,7 +15,7 @@
           flex-direction: column;
 }
 
-.navbar_container, .navbar_container_inner, .navbar_container_inner_basket, .stock_title, .stock_wrapp, .container_pizza .title_pizza, .container_pizza .inner_pizza .pizza_wrapp, .container_pizza .inner_pizza .pizza_size_text, .container_combo .title_combo, .container_combo .inner_combo .combo_wrapp, .container_snacks .snacks_title, .container_snacks .snacks_inner .snacks_size_btn, .container_snacks .snacks_inner .snacks_wrapp_basket, .container_desserts .desserts_title, .container_desserts .desserts_inner .desserts_wrapp_basket, .container_sauces .sauces_title, .container_sauces .sauces_inner .sauces_wrapp_basket, .container_beverages .beverages_title, .container_beverages .beverages_inner .beverages_size_btn, .container_beverages .beverages_inner .beverages_wrapp_basket, .container_juices .juices_title, .container_juices .juices_inner .juices_size, .container_juices .juices_inner .juices_wrapp_basket, .wrapp_contacts .contacts_main_phone, .wrapp_contacts .contacts_main_time, .wrapp_contacts .contacts_main_mail, .wrapp_contacts .contacts_social_links, .wrapp_contacts .contacts_social_phone_logos, .footer, .basket_group_link, .delivery_map, .vacancies {
+.navbar_container, .navbar_container_inner, .navbar_container_inner_basket, .stock_title, .stock_wrapp, .container_pizza .title_pizza, .container_pizza .inner_pizza .pizza_wrapp, .container_pizza .inner_pizza .pizza_size_text, .container_combo .title_combo, .container_combo .inner_combo .combo_wrapp, .container_snacks .snacks_title, .container_snacks .snacks_inner .snacks_size_btn, .container_snacks .snacks_inner .snacks_wrapp_basket, .container_desserts .desserts_title, .container_desserts .desserts_inner .desserts_wrapp_basket, .container_sauces .sauces_title, .container_sauces .sauces_inner .sauces_wrapp_basket, .container_beverages .beverages_title, .container_beverages .beverages_inner .beverages_size_btn, .container_beverages .beverages_inner .beverages_wrapp_basket, .container_juices .juices_title, .container_juices .juices_inner .juices_size, .container_juices .juices_inner .juices_wrapp_basket, .wrapp_contacts .contacts_main_phone, .wrapp_contacts .contacts_main_time, .wrapp_contacts .contacts_main_mail, .wrapp_contacts .contacts_social_links, .wrapp_contacts .contacts_social_phone_logos, .footer, .basket_group_link, .delivery_map, .vacancies, .background_popup, .background_popup .popup_choice .popup_choice_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,6 +85,10 @@ a {
 
 button:focus {
   border: none;
+  outline: none;
+}
+
+input {
   outline: none;
 }
 
@@ -1847,6 +1851,143 @@ a[title]:hover:after {
 .contractOffer_text {
   font-size: 16px;
   margin-bottom: 10px;
+}
+
+.background_popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.603);
+  width: 100vw;
+  height: 100vh;
+}
+
+.background_popup .container_popup {
+  position: relative;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+  width: 350px;
+  height: 400px;
+}
+
+.background_popup .container_popup .close_popup {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.background_popup .container_popup .close_popup img {
+  width: 100%;
+  height: 100%;
+}
+
+.background_popup .container_popup .popup_wrapp {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.background_popup .container_popup .popup_wrapp .popup_small_input {
+  padding: 0 5px;
+  width: 80px;
+  height: 25px;
+  background-color: transparent;
+  border: 1px solid #FF9900;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.background_popup .container_popup .popup_wrapp .popup_normal_input {
+  padding: 0 5px;
+  width: 130px;
+  height: 25px;
+  background-color: transparent;
+  border: 1px solid #FF9900;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.background_popup .popup_large_input {
+  padding: 0 5px;
+  width: 288px;
+  height: 25px;
+  background-color: transparent;
+  border: 1px solid #FF9900;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.background_popup .popup_choice {
+  margin: 15px 0px;
+  cursor: pointer;
+  font-size: 17px;
+  width: 200px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  border: 1px solid #FF9900;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.background_popup .popup_choice .popup_choice_item {
+  color: #313131;
+}
+
+.background_popup .popup_choice .popup_choice_itemActive {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: #FF9900;
+}
+
+.background_popup .popup_send {
+  margin-top: 20px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #FF9900;
+  border: 1px solid #FF9900;
+  border-radius: 5px;
+  width: 130px;
+  height: 40px;
 }
 
 @media only screen and (max-width: 700px) {

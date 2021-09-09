@@ -9,6 +9,10 @@ export const basketSumReducer = (state = initialState, action) => {
             state = {...state, basketSum: Math.round(state.basketSum + action.payload)}
             state = {...state, basketGoods: state.basketGoods + 1}
             return state;
+        case 'CLEAR_SUM': 
+            return {...state, 
+                basketSum: 0,
+                basketGoods: 0,}
         default:
             return state
     }

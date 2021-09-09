@@ -1,0 +1,107 @@
+.background_popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.603);
+    width: 100vw;
+    height: 100vh;
+
+    @extend %flex-2c;
+    .container_popup {
+        position: relative;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fff;
+        width: 350px;
+        height: 400px;
+        .close_popup {
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 30px;
+            height: 30px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .popup_wrapp {
+            width: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            .popup_small_input {
+                padding: 0 5px;
+                width: 80px;
+                height: 25px;
+                background-color: transparent;
+                border: 1px solid #FF9900;
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            .popup_normal_input {
+                padding: 0 5px;
+                width: 130px;
+                height: 25px;
+                background-color: transparent;
+                border: 1px solid #FF9900;
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .popup_large_input {
+        padding: 0 5px;
+        width: 288px;
+        height: 25px;
+        background-color: transparent;
+        border: 1px solid #FF9900;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    .popup_choice {
+        margin: 15px 0px;
+        cursor: pointer;
+        font-size: 17px;
+        width: 200px;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        border: 1px solid #FF9900;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        .popup_choice_item {
+            color: #313131;
+            @extend %flex-2c;
+        }
+        .popup_choice_itemActive {
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            background-color: #FF9900;
+        }
+    }
+    .popup_send {
+        margin-top: 20px;
+        cursor: pointer;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        background-color: #FF9900;;
+        border: 1px solid #FF9900;
+        border-radius: 5px;
+        width: 130px;
+        height: 40px;
+    }
+
+}
