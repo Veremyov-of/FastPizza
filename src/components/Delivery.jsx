@@ -1,11 +1,6 @@
 import { YMaps, Map } from 'react-yandex-maps';
 
 //components
-import Contacts from './Contacts';
-import Payment from './Payment';
-import Footer from './Footer';
-import Navbar from './Navbar';
-
 export default function Delivery() {
     const test = {
         width: '100%',
@@ -13,7 +8,6 @@ export default function Delivery() {
     }
     return (
         <div id="deliveryid">
-            <Navbar />
             <div className="delivery container">
                 <h2 className="delivery_title">Условия доставки пиццы</h2>
                 <p className="delivery_text">

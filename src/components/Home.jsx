@@ -1,6 +1,4 @@
 //components
-import Navbar from './Navbar';
-
 import Pizza from './Pizza';
 import Combo from './Combo';
 import Snacks from './Snacks';
@@ -14,7 +12,6 @@ import Slider from './Slider';
 export default function Home() {
     return (
         <div>
-            <Navbar /> 
             <Slider/>
             <div className="container">
                 <Pizza/>

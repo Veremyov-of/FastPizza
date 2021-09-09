@@ -40,8 +40,8 @@ export default function Contacts() {
             <div className="info container">
                 <div className="info_wrapp">
                     <HashLink to="/delivery#deliveryid" className="info_wrapp_link">Условия доставки</HashLink>
-                    <a href="/" className="info_wrapp_link">Договор оферты</a>
-                    <a href="/" className="info_wrapp_link">Ваканси</a>
+                    <HashLink to="/contractOffer#contractOfferid" className="info_wrapp_link">Договор оферты</HashLink>
+                    <HashLink to="/vacancies#vacanciesid" className="info_wrapp_link">Ваканси</HashLink>
                 </div>
                 <div className="info_pay">
                     <a href="/" className="info_pay_link">Положение об оплате и безопасности платежей</a>

@@ -7,7 +7,7 @@ import "./css/style.css";
 
 //components
 import Overheader from './components/Overheader';
-// import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar";
 
 import Home from './components/Home';
 import Stock from './components/Stock';
@@ -19,6 +19,9 @@ import Footer from "./components/Footer";
 import Basket from './components/Basket';
 import Delivery from "./components/Delivery";
 
+import Vacancies from "./components/Vacancies";
+import ContractOffer from "./components/ContractOffer";
+
 function App() {
 
 
@@ -26,6 +29,7 @@ function App() {
   return (
     <Router>
         <Overheader />
+        <Navbar />
         <Switch>
           <Route exact path="/">
             <Home />
@@ -38,6 +42,12 @@ function App() {
           </Route>
           <Route path="/basket">
             <Basket />
+          </Route>
+          <Route path="/vacancies">
+            <Vacancies />
+          </Route>
+          <Route path="/contractOffer">
+            <ContractOffer />
           </Route>
         </Switch>
         <Contacts />

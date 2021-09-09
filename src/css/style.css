@@ -15,7 +15,7 @@
           flex-direction: column;
 }
 
-.navbar_container, .navbar_container_inner, .navbar_container_inner_basket, .stock_title, .stock_wrapp, .container_pizza .title_pizza, .container_pizza .inner_pizza .pizza_wrapp, .container_pizza .inner_pizza .pizza_size_text, .container_combo .title_combo, .container_combo .inner_combo .combo_wrapp, .container_snacks .snacks_title, .container_snacks .snacks_inner .snacks_size_btn, .container_snacks .snacks_inner .snacks_wrapp_basket, .container_desserts .desserts_title, .container_desserts .desserts_inner .desserts_wrapp_basket, .container_sauces .sauces_title, .container_sauces .sauces_inner .sauces_wrapp_basket, .container_beverages .beverages_title, .container_beverages .beverages_inner .beverages_size_btn, .container_beverages .beverages_inner .beverages_wrapp_basket, .container_juices .juices_title, .container_juices .juices_inner .juices_size, .container_juices .juices_inner .juices_wrapp_basket, .wrapp_contacts .contacts_main_phone, .wrapp_contacts .contacts_main_time, .wrapp_contacts .contacts_main_mail, .wrapp_contacts .contacts_social_links, .wrapp_contacts .contacts_social_phone_logos, .footer, .basket_group_link, .delivery_map {
+.navbar_container, .navbar_container_inner, .navbar_container_inner_basket, .stock_title, .stock_wrapp, .container_pizza .title_pizza, .container_pizza .inner_pizza .pizza_wrapp, .container_pizza .inner_pizza .pizza_size_text, .container_combo .title_combo, .container_combo .inner_combo .combo_wrapp, .container_snacks .snacks_title, .container_snacks .snacks_inner .snacks_size_btn, .container_snacks .snacks_inner .snacks_wrapp_basket, .container_desserts .desserts_title, .container_desserts .desserts_inner .desserts_wrapp_basket, .container_sauces .sauces_title, .container_sauces .sauces_inner .sauces_wrapp_basket, .container_beverages .beverages_title, .container_beverages .beverages_inner .beverages_size_btn, .container_beverages .beverages_inner .beverages_wrapp_basket, .container_juices .juices_title, .container_juices .juices_inner .juices_size, .container_juices .juices_inner .juices_wrapp_basket, .wrapp_contacts .contacts_main_phone, .wrapp_contacts .contacts_main_time, .wrapp_contacts .contacts_main_mail, .wrapp_contacts .contacts_social_links, .wrapp_contacts .contacts_social_phone_logos, .footer, .basket_group_link, .delivery_map, .vacancies {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1816,6 +1816,15 @@ a[title]:hover:after {
 
 .delivery_map {
   padding: 30px 0px;
+}
+
+.vacancies {
+  width: 100%;
+  height: 350px;
+}
+
+.vacancies h2 {
+  color: #313131;
 }
 
 @media only screen and (max-width: 700px) {

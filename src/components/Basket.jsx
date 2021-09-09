@@ -2,8 +2,6 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 //components
-import Navbar from "./Navbar";
-
 import BasketPizza from "./BasketPizza";
 import BasketCombo from './BasketCombo';
 import BasketSnacks from "./BasketSnacks";
@@ -18,7 +16,6 @@ export default function Basket() {
     const basketSum = useSelector(state => state.basketSum.basketSum)
     return (
        <div id="basketName">
-            <Navbar/>
             <div className="basket">
                 <h2 className="basket_title">Корзина</h2>
                 <BasketPizza />

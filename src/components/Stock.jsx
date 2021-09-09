@@ -1,11 +1,9 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
 export default function Stock() {
     const stock = useSelector(state => state.stock.stock);
     return (
         <div>
-            <Navbar/>
             <div className="stock container">
                 <h2 className="stock_title">Акции на доставку пиццы</h2>
                 <div className="stock_wrapp">
