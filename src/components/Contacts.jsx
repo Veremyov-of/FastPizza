@@ -1,3 +1,5 @@
+import { HashLink } from "react-router-hash-link";
+
 export default function Contacts() {
     return (
         <div className="wrapp_contacts">
@@ -37,7 +39,7 @@ export default function Contacts() {
             </div>
             <div className="info container">
                 <div className="info_wrapp">
-                    <a href="/" className="info_wrapp_link">Условия доставки</a>
+                    <HashLink to="/delivery#deliveryid" className="info_wrapp_link">Условия доставки</HashLink>
                     <a href="/" className="info_wrapp_link">Договор оферты</a>
                     <a href="/" className="info_wrapp_link">Ваканси</a>
                 </div>
