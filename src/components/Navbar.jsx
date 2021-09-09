@@ -11,6 +11,13 @@ export default function Navbar() {
 
     const menuToggle = () => {
         const newState = !menu;
+        if(newState) {
+            document.body.style.overflow = "hidden";
+            console.log('ok')
+        } else {
+            document.body.style.overflow = "visible";
+            console.log('no ok')
+        }
         setMenu(newState);
     }
     return (
