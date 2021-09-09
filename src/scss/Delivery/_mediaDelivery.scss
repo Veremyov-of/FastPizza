@@ -1,0 +1,27 @@
+@media only screen and (max-width: 470px) {
+    .delivery {
+        padding: 0 10px;
+        &_title{
+            font-weight: 400;
+            text-align: center;
+            color: #313131;
+            font-size: 28px;
+            margin: 20px 0px;
+        }
+        &_text {
+            margin: 0 auto;
+            max-width: 790px;
+            font-size: 15px;
+            white-space: pre-wrap;
+            line-height: 30px;
+            margin-bottom: 20px;
+        }
+        &_textBold {
+            margin: 0 auto;
+            max-width: 790px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 30px;
+        }
+    }
+}

@@ -13,6 +13,7 @@
     "react-router-dom": "^5.2.0",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "4.0.3",
+    "react-yandex-maps": "^4.6.0",
     "redux": "^4.1.1",
     "redux-logger": "^3.0.6",
     "swiper": "^6.3.1",

@@ -17,6 +17,7 @@ import Contacts from './components/Contacts';
 import Payment from "./components/Payment";
 import Footer from "./components/Footer";
 import Basket from './components/Basket';
+import Delivery from "./components/Delivery";
 
 function App() {
 
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route path="/stock">
             <Stock />
+          </Route>
+          <Route path="/delivery">
+            <Delivery />
           </Route>
           <Route path="/basket">
             <Basket />

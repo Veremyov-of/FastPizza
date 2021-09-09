@@ -22,7 +22,7 @@ export default function Navbar() {
                 <Link  smooth onClick={menuToggle} to="/#snacks" className="navbar_nav_link">Закуски</Link>
                 <Link  smooth onClick={menuToggle} to="/#beverages" className="navbar_nav_link">Напитки</Link>
                 <Link  smooth onClick={menuToggle} to="/stock" className="navbar_nav_link">Акции</Link>
-                <Link  smooth onClick={menuToggle} to="/" className="navbar_nav_link">Доставка</Link>
+                <Link  smooth onClick={menuToggle} to="/delivery#deliveryid" className="navbar_nav_link">Доставка</Link>
             </div>
             <div className="navbar_container">
                 <button className="navbar_container_support">Служба поддержки</button>
