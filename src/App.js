@@ -27,7 +27,7 @@ function App() {
 
 
   return (
-    <Router>
+    <Router basename="/FastPizza">
         <Overheader />
         <Navbar />
         <Switch>
