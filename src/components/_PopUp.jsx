@@ -5,6 +5,7 @@ export default function PopUp() {
     const dispatch = useDispatch();
     const togglePopup = () => {
         dispatch({type: "POP_UP"});
+        
     }
     const send = () => {
         dispatch({type: "SEND_ALL"});
@@ -12,9 +13,9 @@ export default function PopUp() {
         dispatch({type: "POP_UP"});
     }
     return(
-        <div className="background_popup">
+        <div className='background_popup'>
             <form className="container_popup">
-                <button onClick={togglePopup} className="close_popup"><img src="./img/close.png" alt="img"/></button>
+                <button type="button" onClick={togglePopup} className="close_popup"><img src="./img/close.png" alt="img"/></button>
                 <input maxLength="20" type="phone" placeholder="Телефон" className="popup_large_input"/>
                 <input maxLength="15" type="text" placeholder="Имя" className="popup_large_input"/>
                 <div className="popup_wrapp">

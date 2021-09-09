@@ -22,7 +22,6 @@ export default function Basket() {
     return (
        <div id="basketName">
            {popup && <PopUp />} 
-           
             <div className="basket">
                 <h2 className="basket_title">Корзина</h2>
                 <BasketPizza />
