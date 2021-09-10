@@ -60,6 +60,17 @@
                 font-weight: 500;
 
             }
+            &_close {
+                cursor: pointer;
+                background-color: transparent;
+                border: none;
+                width: 20px;
+                height: 20px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
         }
     }
     }

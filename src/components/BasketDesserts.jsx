@@ -1,8 +1,16 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 
 export default function BasketDesserts() {
     const desserts = useSelector(state => state.basket.basketDesserts);
+    const dispatch = useDispatch();
+
+    const deleteDesserts  = (index) => {
+        const indexItem = index;
+        const price = desserts[index].price;
+        dispatch({type: "DELETE_DESSERTS", payload: indexItem});
+        dispatch({type: "PRICE_UPDATA", payload: price})
+    }
     return (
         <div className="basketPizza">
             {desserts.map((item, index) => (
@@ -14,7 +22,7 @@ export default function BasketDesserts() {
                     </div>
                     <div className="basketPizza_item_funBlock">
                         <div className="basketPizza_item_funBlock_price">{item.price} руб</div>
-                        <button className="basketPizza_item_funBlock_close"></button>
+                        <button onClick={() => deleteDesserts(index)} className="basketPizza_item_funBlock_close"><img src="./img/close.png" alt="img"/></button>
                     </div>
                 </div>
             ))}

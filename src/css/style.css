@@ -1789,6 +1789,19 @@ a[title]:hover:after {
   font-weight: 500;
 }
 
+.basketPizza_item_funBlock_close {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  width: 20px;
+  height: 20px;
+}
+
+.basketPizza_item_funBlock_close img {
+  width: 100%;
+  height: 100%;
+}
+
 .delivery {
   padding: 0 10px;
 }
