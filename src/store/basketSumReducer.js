@@ -14,7 +14,7 @@ export const basketSumReducer = (state = initialState, action) => {
                 basketSum: 0,
                 basketGoods: 0,}
         case 'PRICE_UPDATA':
-            const prices = state.basketSum - action.payload;
+            const prices = state.basketSum - action.payload
             const goods = state.basketGoods - 1;
             return {...state, basketSum: Math.round(prices), basketGoods: goods}
         default:

@@ -3,12 +3,14 @@ const initialState = [
             name: "Coca-cola",
             sum: 1,
             size: false,
+            bigPrice: 3,
             price: 2,
             imgUrl: './img/beverages/img1.png'
         },
         {
             name: "Coca-cola",
             sum: 1,
+            bigPrice: 3,
             size: false,
             price: 2,
             imgUrl: './img/beverages/img1.png'
@@ -16,6 +18,7 @@ const initialState = [
         {
             name: "Coca-cola",
             sum: 1,
+            bigPrice: 3,
             size: false,
             price: 2,
             imgUrl: './img/beverages/img1.png'

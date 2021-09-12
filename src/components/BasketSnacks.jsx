@@ -22,7 +22,7 @@ export default function BasketSnacks() {
                         <div className="basketPizza_item_wrapp_number">кол.{item.sum > 1 ? item.sum : 1}</div>
                     </div>
                     <div className="basketPizza_item_funBlock">
-                        <div className="basketPizza_item_funBlock_price">{item.price} руб</div>
+                        <div className="basketPizza_item_funBlock_price">{item.size ? item.bigPrice : item.price} руб</div>
                         <button onClick={() => deleteSnacks(index)} className="basketPizza_item_funBlock_close"><img src="./img/close.png" alt="img"/></button>
                     </div>
                 </div>

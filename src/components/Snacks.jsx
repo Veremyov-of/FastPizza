@@ -6,7 +6,12 @@ export default function Snacks() {
     const addBasket = (item) => {
         const newItem = {...item};
         dispatch({type: 'ADD_SNACKS', payload: newItem});
-        dispatch({type: 'ADD_BASKET_SUM', payload: item.price})
+        if(item.size) {
+            dispatch({type: 'ADD_BASKET_SUM', payload: item.bigPrice})
+        } else {
+            dispatch({type: 'ADD_BASKET_SUM', payload: item.price})
+        }
+        
     }
     const selectionSize = (item) => {
         const indexItem = snacks.indexOf(item);

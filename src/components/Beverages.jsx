@@ -7,7 +7,12 @@ export default function Beverages() {
     const addBasket = (item) => {
         const newItem = {...item};
         dispatch({type: 'ADD_BEVERAGES', payload: newItem});
-        dispatch({type: 'ADD_BASKET_SUM', payload: item.price})
+        if(item.size) {
+            dispatch({type: 'ADD_BASKET_SUM', payload: item.bigPrice})
+        } else {
+            dispatch({type: 'ADD_BASKET_SUM', payload: item.price})
+        }
+       
     }
     const selectionSize = (item) => {
         const indexItem = beverages.indexOf(item);
@@ -29,7 +34,7 @@ export default function Beverages() {
                             
                         </div>
                         <div onClick={() => addBasket(item)} className="beverages_wrapp">
-                            <div className="beverages_wrapp_price">{item.price} руб</div>
+                            <div className="beverages_wrapp_price">{item.size ? item.bigPrice : item.price} руб</div>
                             <div className="beverages_wrapp_basket">в корзину</div>
                         </div>
                     </div>
